@@ -71,5 +71,39 @@ class Practice {
       return output; 
   }
 
+  // 75. Sort Colors
+  class SortColors {
+    public void sortColors(int[] nums) {
+        int n = nums.length;
+        if (n == 0 || n == 1) return; 
+
+        int lp = 0;
+        int rp = n - 1; 
+
+        int index = 0; 
+        while (index <= rp) {
+            if (nums[index] == 2) {
+                swap(nums, rp, index); 
+                rp--;
+            }
+            else if (nums[index] == 0) {
+                swap(nums, lp, index);
+                lp++;
+                index++; 
+            }
+            else 
+                index++; 
+        }
+    }
+
+    private void swap(int[] arr, int index1, int index2){
+        int tmp = arr[index1]; 
+        arr[index1] = arr[index2]; 
+        arr[index2] = tmp; 
+    }
+
+
+
+}
 
 }
