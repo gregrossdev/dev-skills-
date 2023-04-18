@@ -125,7 +125,27 @@ class Practice {
     }
   }
 
-  
+  // 42. Trapping Rain Water
+  public int trap(int[] height) {
+		int output = 0;
+		int n = height.length;
+		int lp = 0, rp = n - 1;
+		int lpMax = height[lp], rpMax = height[rp];
+		
+		while (lp < rp) 
+			if(lpMax < rpMax) {
+				lp++; 
+				lpMax =  Math.max(lpMax, height[lp]); 
+				output += lpMax - height[lp]; 
+			} 
+			else {
+				rp--; 
+				rpMax = Math.max(rpMax, height[rp]); 
+				output += rpMax - height[rp];						
+			}
+		
+		return output;
+	}
 
 
 }
