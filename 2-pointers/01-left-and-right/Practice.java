@@ -42,4 +42,35 @@ class Practice {
     return output; 
   }
 
+  // 15. 3Sum
+  public List<List<Integer>> threeSum(int[] nums) {
+      List<List<Integer>> output = new ArrayList<>();  
+      Arrays.sort(nums);
+
+      int n = nums.length; 
+      for(int lp1 = 0; lp1<n; lp1++)
+      {
+          if(lp1 != 0 && nums[lp1]==nums[lp1-1]) continue; 
+          int lp2 = lp1 + 1; 
+          int rp  = n - 1; 
+          while(lp2 < rp) 
+          {
+              if(nums[lp1] + nums[lp2] + nums[rp] == 0) {
+                  output.add(Arrays.asList(nums[lp1],nums[lp2],nums[rp]));
+                  lp2++;
+                  while(lp2 < rp && nums[lp2]==nums[lp2-1]) 
+                      lp2++; 
+              }
+              else if(nums[lp1] + nums[lp2] + nums[rp] < 0)
+                  lp2++;
+              else 
+                  rp--; 
+          }
+      }
+      
+      return output; 
+  }
+
+
+
 }
