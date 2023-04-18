@@ -106,5 +106,24 @@ class Practice {
 
   }
 
+  // 283. Move Zeroes
+  class moveZeroes {
+    public void moveZeroes(int[] nums) {
+        int n = nums.length; 
+        if (nums == null || n == 0) return;
+        
+        int rp = 0;
+        for (int lp = 0; lp < n; lp++) 
+            if (nums[lp] != 0) 
+                swap(nums, rp++, lp); 
+    }
+
+    private void swap(int[] arr, int index1, int index2) {
+        int tmp = arr[index1]; 
+        arr[index1] = arr[index2]; 
+        arr[index2] = tmp; 
+    }
+}
+
 
 }
