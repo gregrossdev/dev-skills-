@@ -22,20 +22,20 @@ class Practice {
 
       // rotate entire array 
       reverse(nums, 0, n-1); 
-      // rotate k number at start of array
+      // rotate beginning index=0, index=k-1
       reverse(nums, 0, k-1); 
-      // rotate k number at end of array
+      // rotate end index=k, index=n-1
       reverse(nums, k, n-1); 
     }
         
-    public void reverse(int[] nums, int p1slow, int p2fast) {
-      while (p1slow < p2fast) {
-          int swap = nums[p1slow];
-          nums[p1slow] = nums[p2fast];
-          nums[p2fast] = swap;
+    public void reverse(int[] nums, int start, int end) {
+      while (start < end) {
+          int swap = nums[start];
+          nums[start] = nums[end];
+          nums[end] = swap;
             
-          p1slow++;
-          p2fast--;  
+          start++;
+          end--;  
       }
     }
     
