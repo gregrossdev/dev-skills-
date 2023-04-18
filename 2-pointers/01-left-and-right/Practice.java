@@ -48,24 +48,25 @@ class Practice {
       Arrays.sort(nums);
 
       int n = nums.length; 
-      for(int lp1 = 0; lp1<n; lp1++)
-      {
-          if(lp1 != 0 && nums[lp1]==nums[lp1-1]) continue; 
-          int lp2 = lp1 + 1; 
-          int rp  = n - 1; 
-          while(lp2 < rp) 
-          {
-              if(nums[lp1] + nums[lp2] + nums[rp] == 0) {
-                  output.add(Arrays.asList(nums[lp1],nums[lp2],nums[rp]));
-                  lp2++;
-                  while(lp2 < rp && nums[lp2]==nums[lp2-1]) 
-                      lp2++; 
-              }
-              else if(nums[lp1] + nums[lp2] + nums[rp] < 0)
-                  lp2++;
-              else 
-                  rp--; 
-          }
+      for (int i = 0; i < n; i++) {
+        if(i != 0 && nums[i]==nums[i-1]) continue; 
+
+        int temp = nums[i]; 
+        int lp = i + 1; 
+        int rp = n - 1; 
+        
+        while(lp < rp) {
+            int sum = temp + nums[lp] + nums[rp]; 
+            if(sum > 0) rp--; 
+            else if(sum < 0) lp++; 
+            else {
+                output.add(Arrays.asList(temp,nums[lp],nums[rp])); 
+                rp--; 
+                lp++;
+                while(nums[lp]==nums[lp-1] && lp < rp) 
+                    lp++; 
+            }
+        }
       }
       
       return output; 
@@ -127,25 +128,25 @@ class Practice {
 
   // 42. Trapping Rain Water
   public int trap(int[] height) {
-		int output = 0;
-		int n = height.length;
-		int lp = 0, rp = n - 1;
-		int lpMax = height[lp], rpMax = height[rp];
-		
-		while (lp < rp) 
-			if(lpMax < rpMax) {
-				lp++; 
-				lpMax =  Math.max(lpMax, height[lp]); 
-				output += lpMax - height[lp]; 
-			} 
-			else {
-				rp--; 
-				rpMax = Math.max(rpMax, height[rp]); 
-				output += rpMax - height[rp];						
-			}
-		
-		return output;
-	}
+    int output = 0;
+    int n = height.length;
+    int lp = 0, rp = n - 1;
+    int lpMax = height[lp], rpMax = height[rp];
+    
+    while (lp < rp) 
+        if(lpMax < rpMax) {
+            lp++; 
+            lpMax =  Math.max(lpMax, height[lp]); 
+            output += lpMax - height[lp]; 
+        } 
+        else {
+            rp--; 
+            rpMax = Math.max(rpMax, height[rp]); 
+            output += rpMax - height[rp];						
+        }
+    
+    return output;
+}
 
 
 }
