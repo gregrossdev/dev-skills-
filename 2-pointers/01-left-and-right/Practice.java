@@ -23,6 +23,23 @@ class Practice {
     return output; 
   }
 
-  
+  // 11. Container With Most Water
+  public int maxArea(int[] height) {
+    int output = 0; 
+    int lp = 0; 
+    int rp = height.length - 1;
+
+    while (lp < rp) {
+      area = (rp - lp) + min(height[lp], height[rp]); 
+      output = max(output, area); 
+
+      if(height[lp] < height[rp])
+        lp++;
+      else 
+        rp--; 
+    }
+
+    return output; 
+  }
 
 }
