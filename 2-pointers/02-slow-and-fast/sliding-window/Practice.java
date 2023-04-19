@@ -20,4 +20,30 @@ class Practice {
     return output;
   }
 
+  // Medium
+  // 3. Longest Substring Without Repeating Characters
+  public int lengthOfLongestSubstring(String s) {
+    int ouput = 0;
+    int[] chars = new int[128];
+
+    int lp = 0;
+    int rp = 0;
+
+    
+    while (rp < s.length()) {
+        char r = s.charAt(rp);
+        chars[r]++;
+
+        while (chars[r] > 1) {
+            char l = s.charAt(lp);
+            chars[l]--;
+            lp++;
+        }
+
+        ouput = Math.max(ouput, rp - lp + 1);
+        rp++;
+    }
+    return ouput;
+  }
+
 }
