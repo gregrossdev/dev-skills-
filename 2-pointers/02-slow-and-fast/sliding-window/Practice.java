@@ -46,4 +46,28 @@ class Practice {
     return ouput;
   }
 
+  // Medium
+  // 424. Longest Repeating Character Replacement
+  public int characterReplacement(String s, int k) {
+    int output = 0;
+    int[] chars = new int[26];
+
+    int max = 0;
+    int lp = 0;
+    for (int rp = 0; rp < s.length(); rp++) {
+        int rpIndex = s.charAt(rp) - 'A'; 
+        chars[rpIndex]++;
+        max = Math.max(max, chars[rpIndex]);
+
+        if (rp - lp + 1 - max > k) {
+            chars[s.charAt(lp) - 'A']--;
+            lp++;
+        }
+        output = Math.max(output, rp - lp + 1);
+    }
+    return output;
+  }
+
+  
+
 }
