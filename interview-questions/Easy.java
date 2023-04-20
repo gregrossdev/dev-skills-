@@ -32,7 +32,7 @@ class Easy {
     }
 
     // 13. Roman to Integer
-    // Time: O(n) (maybe) 
+    // Time: ?O(n) 
     public int romanToInt(String s) {
         int output = 0;
         Map<Character, Integer> map = new HashMap<>(); 
@@ -52,6 +52,19 @@ class Easy {
             output += map.get(s.charAt(lp)); 
       
         return output;
+    }
+
+    // 14. Longest Common Prefix
+    // Time: ?O(n)
+    public String longestCommonPrefix(String[] strs) {
+        String prefix = ""; 
+        if (strs.length == 0) return "";
+        prefix = strs[0];
+        for (int lp=1; lp<strs.length; lp++) 
+            while (strs[lp].indexOf(prefix) != 0) 
+                prefix = prefix.substring(0, prefix.length() - 1);
+            
+        return prefix;
     }
 
 
