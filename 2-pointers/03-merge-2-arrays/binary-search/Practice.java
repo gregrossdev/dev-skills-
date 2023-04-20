@@ -21,12 +21,3 @@ class Practice {
         return output;
     }
 }
-
-
-
-
-
-
-
-
-}
