@@ -1,5 +1,21 @@
 class Practice {
 
+
+	//---2 Sum problem
+	// Medium
+	// 167. Two Sum II - Input Array Is Sorted
+	public int[] twoSum(int[] numbers, int target) {
+		int[] output = new int[2]; 
+		int lp = 0, rp = numbers.length - 1;
+		while(lp < rp){
+				int sum = numbers[lp] + numbers[rp];
+				if(sum == target) return output = new int[]{lp + 1, rp + 1};
+				else if(sum < target) lp++;
+				else rp--;
+		}
+		return output;
+  }
+
 	// Easy
 	// 125. Valid Palindrome
 	public boolean isPalindrome(String s) {  
