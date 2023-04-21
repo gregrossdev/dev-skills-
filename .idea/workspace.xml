@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/codewars/arrays/Practice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/arrays/Practice.ts" afterDir="false" />
-    </list>
+    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="8kyu Count of positives / sum of negatives" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +37,16 @@
       <option name="presentableId" value="Default" />
       <updated>1682085774171</updated>
       <workItem from="1682085775767" duration="82000" />
-      <workItem from="1682099536137" duration="347000" />
+      <workItem from="1682099536137" duration="945000" />
     </task>
+    <task id="LOCAL-00001" summary="8kyu Count of positives / sum of negatives">
+      <created>1682100193269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682100193269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -56,5 +62,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="8kyu Count of positives / sum of negatives" />
+    <option name="LAST_COMMIT_MESSAGE" value="8kyu Count of positives / sum of negatives" />
   </component>
 </project>
