@@ -88,6 +88,47 @@ class Practice {
 		return output;
 	}
 
+	// Easy 
+	// 653. Two Sum IV - Input is a BST
+	/**
+	 * Definition for a binary tree node.
+	 * public class TreeNode {
+	 *     int val;
+	 *     TreeNode left;
+	 *     TreeNode right;
+	 *     TreeNode() {}
+	 *     TreeNode(int val) { this.val = val; }
+	 *     TreeNode(int val, TreeNode left, TreeNode right) {
+	 *         this.val = val;
+	 *         this.left = left;
+	 *         this.right = right;
+	 *     }
+	 * }
+	 */
+	class FindTarget {
+		public boolean findTarget(TreeNode root, int k) {
+			List<Integer> list = new ArrayList();
+			inorder(root, list);
+			int lp = 0; 
+			int rp = list.size() - 1;
+			while (lp < rp) {
+				int sum = list.get(lp) + list.get(rp);
+				if (sum == k) return true;
+				else if (sum < k) lp++;
+				else rp--;
+			}
+
+			return false;
+		}
+
+		public void inorder(TreeNode root, List<Integer> list) {
+			if (root == null)    return;
+			inorder(root.left, list);
+			list.add(root.val);
+			inorder(root.right, list);
+		}
+	}
+
 
 
 
