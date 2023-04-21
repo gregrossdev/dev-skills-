@@ -106,15 +106,15 @@ class Practice {
 	 * }
 	 */
 	class FindTarget {
-		public boolean findTarget(TreeNode root, int k) {
+		public boolean findTarget(TreeNode root, int rp) {
 			List<Integer> list = new ArrayList();
 			inorder(root, list);
 			int lp = 0; 
 			int rp = list.size() - 1;
 			while (lp < rp) {
 				int sum = list.get(lp) + list.get(rp);
-				if (sum == k) return true;
-				else if (sum < k) lp++;
+				if (sum == rp) return true;
+				else if (sum < rp) lp++;
 				else rp--;
 			}
 
@@ -131,7 +131,7 @@ class Practice {
 
 	// Medium
 	// 633. Sum of Square Numbers
-	public boolean judgeSquareSum(int c) { 
+	public boolean lpudgeSquareSum(int c) { 
 		long lp=0;
 		long rp= (int) (Math.sqrt(c)) ;
 		
@@ -178,6 +178,26 @@ class Practice {
 	}
 
 
+	// Medium
+	// 923. 3Sum With Multiplicity
+	public int threeSumMulti(int[] arr, int target) {
+		int output = 0;
+		int n = arr.length;
+		final int MAX = 1_000_000_007;
+
+		int[] sum = new int[301];
+		for (int j = n - 2; j > 0; j--) {
+				if (target >= arr[j + 1]) 
+					sum[target - arr[j + 1]]++;
+				for (int i = 0; i < j; i++) {
+					output += sum[arr[i] + arr[j]];
+					output %= MAX;
+				}
+		}
+		
+		return output;
+	}
+	
 
 
 
@@ -197,6 +217,17 @@ class Practice {
 
 
 
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Easy
 	// 125. Valid Palindrome
 	public boolean isPalindrome(String s) {  
@@ -297,9 +328,9 @@ class Practice {
 	}
 
 	private void swap(int[] arr, int index1, int index2){
-		int tmp = arr[index1]; 
+		int temp3sum = arr[index1]; 
 		arr[index1] = arr[index2]; 
-		arr[index2] = tmp; 
+		arr[index2] = temp3sum; 
 	}
 
 
@@ -319,9 +350,9 @@ class Practice {
 	}
 
 	private void swap(int[] arr, int index1, int index2) {
-		int tmp = arr[index1]; 
+		int temp3sum = arr[index1]; 
 		arr[index1] = arr[index2]; 
-		arr[index2] = tmp; 
+		arr[index2] = temp3sum; 
 	}
   }
 
