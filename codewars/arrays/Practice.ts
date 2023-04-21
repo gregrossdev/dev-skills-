@@ -1,4 +1,5 @@
-// 8kyu Sum of positive
+// 8 kyu
+// Sum of positive
 export function positiveSum(arr:number[]):number 
 {
   let output: number = 0; 
@@ -6,7 +7,8 @@ export function positiveSum(arr:number[]):number
   return output; 
 }
 
-// 8kyu Count of positives / sum of negatives
+// 8 kyu
+// Count of positives / sum of negatives
 export function countPositivesSumNegatives(input: any): any[] | number[]
 {
   if (input === null || input.length ===0) return [];
@@ -17,4 +19,10 @@ export function countPositivesSumNegatives(input: any): any[] | number[]
     output[1] += Math.min(0, num);
   }
   return output;
+}
+
+// 8 kyu
+// Square(n) Sum
+export function squareSum(numbers: number[]): number {
+  return numbers.reduce((sum, cur) => sum + (cur**2) ,0);
 }
