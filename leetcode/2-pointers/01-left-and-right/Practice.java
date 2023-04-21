@@ -129,6 +129,21 @@ class Practice {
 		}
 	}
 
+	// Medium
+	// 633. Sum of Square Numbers
+	public boolean judgeSquareSum(int c) { 
+		long lp=0;
+		long rp= (int) (Math.sqrt(c)) ;
+		
+		while(lp<=rp){
+			long mid = (lp*lp) + (rp*rp);
+			if(mid == c) return true;
+			else if(mid > c) rp--;
+			else lp++;
+		}
+		return false;
+	}     
+
 
 
 
