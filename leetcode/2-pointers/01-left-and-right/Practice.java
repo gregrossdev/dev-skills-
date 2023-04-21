@@ -62,48 +62,51 @@ class Practice {
   }
 
 	// Medium
-  // 18. 4Sum
-  public List<List<Integer>> fourSum(int[] nums, int target) {
-		List<List<Integer>> output = new ArrayList<>();  
-		int n = nums.length;
-		if (nums == null || n < 4) return output;
+  // 1498. Number of Subsequences That Satisfy the Given Sum Condition
+  public int numSubseq(int[] nums, int target) {
+		int output = 0;
 		Arrays.sort(nums);
+		int n = nums.length; 
+		int mod = (int) 1e9+7;
 
-		for (int lp1 = 0; lp1 < n - 3; lp1++) {
-			// Check for duplicates
-			if (lp1 > 0 && nums[lp1] == nums[lp1 - 1]) continue;
-			// Reduce to 3Sum problem
-			for (int lp2 = lp1 + 1; lp2 < n - 2; lp2++) {
-					// Check for duplicates
-					if(lp2 > lp1 + 1 && nums[lp2] == nums[lp2 -1]) continue; 
-					
-
-					int lp3 = lp2 + 1;
-					int rp = n - 1;
-					// Reduce to 2sum problem
-					while (lp3 < rp) {
-							int sum = nums[lp1] + nums[lp2] + nums[lp3] + nums[rp];
-							if(sum == target) {
-								List<Integer> result = new ArrayList<>(); 
-								result.add(nums[lp1]);
-								result.add(nums[lp2]); 
-								result.add(nums[lp3]); 
-								result.add(nums[rp]);
-								output.add(result); 
-								lp3++;
-								rp--; 
-								while (lp3 < rp && nums[lp3] == nums[lp3-1]) lp3++;  
-								while (lp3 < rp && nums[rp] == nums[rp+1]) rp--;  
-							}
-							else if(sum < target) 
-								lp3++;
-							else 
-								rp--; 
-					}
+		int[] power = new int[n+1];
+		power[0] = 1;
+		for(int i = 1; i<power.length; i++)
+				power[i] = (power[i-1]*2)%mod;
+		
+		int lp = 0; 
+		int rp = n-1;
+		while(lp<=rp){
+				if(nums[lp]+nums[rp] <= target){
+					output =( output + power[rp-lp])%mod;
+					lp++;
 				}
-			}
-		return output; 
-  }
+				else if(nums[lp]+nums[rp]>target) rp--;
+				
+		}
+
+		return output;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
