@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="webstorm metadata">
+    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="Square(n) Sum">
       <change beforePath="$PROJECT_DIR$/codewars/arrays/Practice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/arrays/Practice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682085774171</updated>
       <workItem from="1682085775767" duration="82000" />
-      <workItem from="1682099536137" duration="1335000" />
+      <workItem from="1682099536137" duration="1687000" />
     </task>
     <task id="LOCAL-00001" summary="8kyu Count of positives / sum of negatives">
       <created>1682100193269</created>
@@ -55,7 +55,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682100509818</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Square(n) Sum">
+      <created>1682100900875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682100900875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +82,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="8kyu Count of positives / sum of negatives" />
     <MESSAGE value="webstorm metadata" />
-    <option name="LAST_COMMIT_MESSAGE" value="webstorm metadata" />
+    <MESSAGE value="Square(n) Sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Square(n) Sum" />
   </component>
 </project>

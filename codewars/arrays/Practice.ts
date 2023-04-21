@@ -26,3 +26,12 @@ export function countPositivesSumNegatives(input: any): any[] | number[]
 export function squareSum(numbers: number[]): number {
   return numbers.reduce((sum, cur) => sum + (cur**2) ,0);
 }
+
+// 8 kyu
+// Counting sheep...
+export function countSheeps(arrayOfSheep: (boolean | undefined | null)[]) {
+  let output: number = 0;
+  let trueSheep: any[] = arrayOfSheep.filter(sheep => sheep === true);
+  output = trueSheep.length;
+  return output;
+}
