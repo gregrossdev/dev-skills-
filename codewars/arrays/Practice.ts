@@ -35,3 +35,13 @@ export function countSheeps(arrayOfSheep: (boolean | undefined | null)[]) {
   output = trueSheep.length;
   return output;
 }
+
+// 8 kyu
+// Convert number to reversed array of digits
+export const digitize = (n: number): number[] => {
+  let output: number[] = [];
+  let strArr: string[] = n.toString().split("");
+  let numArr: number[] = strArr.map((x: string) => Number(x));
+  output = numArr.reverse();
+  return output;
+};
