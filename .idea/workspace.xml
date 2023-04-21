@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="" />
+    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/codewars/arrays/Practice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/arrays/Practice.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/gregrossdev/edu/dev-skills",
+    "ts.external.directory.path": "C:\\Users\\gregr\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.3739.57\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -36,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682085774171</updated>
       <workItem from="1682085775767" duration="82000" />
+      <workItem from="1682099536137" duration="347000" />
     </task>
     <servers />
   </component>
