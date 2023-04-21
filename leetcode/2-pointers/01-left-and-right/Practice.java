@@ -159,6 +159,24 @@ class Practice {
 		return output;
 	}
 
+	// Medium
+	// 1877. Minimize Maximum Pair Sum in Array
+	public int minPairSum(int[] nums) {
+		int output=0;
+		Arrays.sort(nums);
+
+		int lp=0;
+		int rp = nums.length-1;
+		while(lp<rp){
+				int sum = nums[lp]+nums[rp]; 
+				lp++;
+				rp--;
+				output=Math.max(output, sum);
+		}
+
+		return output;
+	}
+
 
 
 
