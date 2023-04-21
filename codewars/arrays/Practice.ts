@@ -45,3 +45,10 @@ export const digitize = (n: number): number[] => {
   output = numArr.reverse();
   return output;
 };
+
+// 8 kyu
+// A Needle in the Haystack
+export function findNeedle(haystack: any[]):string {
+  let needleIndex: number = haystack.indexOf('needle')
+  return `found the needle at position ${needleIndex}`
+}

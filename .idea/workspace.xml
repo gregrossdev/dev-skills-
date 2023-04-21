@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="Square(n) Sum">
-      <change beforePath="$PROJECT_DIR$/codewars/arrays/Practice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/codewars/arrays/Practice.ts" afterDir="false" />
-    </list>
+    <list default="true" id="5df10829-b21b-4a21-9fa2-f3b1c77adaec" name="Changes" comment="Convert number to reversed array of digits" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682085774171</updated>
       <workItem from="1682085775767" duration="82000" />
-      <workItem from="1682099536137" duration="1687000" />
+      <workItem from="1682099536137" duration="2408000" />
     </task>
     <task id="LOCAL-00001" summary="8kyu Count of positives / sum of negatives">
       <created>1682100193269</created>
@@ -62,7 +60,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682100900875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Counting sheep...">
+      <created>1682101256145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682101256145</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Convert number to reversed array of digits">
+      <created>1682102012614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682102012614</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +95,8 @@
     <MESSAGE value="8kyu Count of positives / sum of negatives" />
     <MESSAGE value="webstorm metadata" />
     <MESSAGE value="Square(n) Sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Square(n) Sum" />
+    <MESSAGE value="Counting sheep..." />
+    <MESSAGE value="Convert number to reversed array of digits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert number to reversed array of digits" />
   </component>
 </project>
