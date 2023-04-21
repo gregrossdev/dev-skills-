@@ -144,7 +144,20 @@ class Practice {
 		return false;
 	}     
 
-
+	// Medium
+	// 881. Boats to Save People
+	public int numRescueBoats(int[] people, int limit) {
+		int output = 0;
+		Arrays.sort(people);
+		int lp = 0; 
+		int rp = people.length - 1; 
+		while (lp <= rp) {
+			if (people[lp] + people[rp] <= limit) lp++;
+			rp--;
+			output++;
+		}
+		return output;
+	}
 
 
 
