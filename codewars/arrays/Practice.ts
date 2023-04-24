@@ -52,3 +52,29 @@ export function findNeedle(haystack: any[]):string {
   let needleIndex: number = haystack.indexOf('needle')
   return `found the needle at position ${needleIndex}`
 }
+
+// 8 kyu
+// Beginner - Lost Without a Map
+export function maps(x: number[]): number[]{
+  return x.map(i => i+i);
+}
+
+// Invert values
+export function invert(array: number[]): number[] {
+  return array.map(x => x*-1);
+}
+
+// You only need one - Beginner
+export const check = (a: (number | string)[], x: number | string): boolean => {
+  return a.includes(x); 
+}
+
+// Calculate average
+export function findAverage(array: number[]): number {
+  let output: number = 0;
+  let n: number = array.length; 
+  if(n === 0) return 0; 
+  
+  array.forEach(val => output += val); 
+  return output/n;
+}
