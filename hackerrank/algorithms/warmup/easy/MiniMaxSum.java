@@ -1,5 +1,3 @@
-package easy;
-
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -21,25 +19,16 @@ class Result {
      */
 
     public static void miniMaxSum(List<Integer> arr) {
-      int n = arr.size(); 
-      long min = 10000;
-      long max = 0;
-      long sum = 0;
-      
-      for(int i=0; i < n; i++) {
-          if(max < arr.get(i))
-             max = arr.get(i);
-  
-          if(min > arr.get(i))
-            min = arr.get(i);
-          
-          sum += arr.get(i);
+      long sum = 0; 
+      int min = arr.get(0); 
+      int max = arr.get(0); 
+      for(int num: arr) {
+        sum += num; 
+        if(num < min) min = num; 
+        if(num > max) max = num; 
       }
-
-      long minSum = sum - max;
-      long maxSum = sum - min;
-
-      System.out.println(minSum + " " + maxSum);
+      
+      System.out.println((sum-max) + " " + (sum-min));
     }
 
 }
