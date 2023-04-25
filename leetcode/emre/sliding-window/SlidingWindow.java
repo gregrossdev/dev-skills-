@@ -1,4 +1,4 @@
-package leetcode.sliding-window;
+package leetcode.emre.sliding-window;
 
 
 // https://emre.me/coding-patterns/sliding-window/
