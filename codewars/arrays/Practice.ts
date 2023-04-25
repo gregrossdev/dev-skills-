@@ -90,3 +90,9 @@ export const fakeBin = (x:string):string => {
   
   return output; 
 };
+
+// Beginner - Reduce but Grow
+export function grow(arr: number[]): number {
+  let output: number = arr.reduce((sum,n) => sum*n); 
+  return output; 
+}
