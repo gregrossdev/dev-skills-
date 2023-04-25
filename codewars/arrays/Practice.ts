@@ -78,3 +78,15 @@ export function findAverage(array: number[]): number {
   array.forEach(val => output += val); 
   return output/n;
 }
+
+// Fake Binary
+export const fakeBin = (x:string):string => {
+  let output: string = "";
+  for(const numStr of x)
+    if(parseInt(numStr) < 5)
+      output += '0';
+    else 
+      output += '1'; 
+  
+  return output; 
+};
