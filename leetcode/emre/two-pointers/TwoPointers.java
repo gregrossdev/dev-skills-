@@ -55,4 +55,24 @@ public class TwoPointers {
     return output;
   }
 
+  // 26. Remove Duplicates from Sorted Array
+  public int removeDuplicates(int[] nums) {
+    int output = 0; 
+    int n = nums.length;
+    
+    int slow = 1;
+    int fast = 1; 
+    while(fast < n) {
+      if(nums[fast] != nums[fast-1]) {
+        nums[slow] = nums[fast]; 
+        slow++; 
+      }
+      fast++; 
+    }
+    
+    output = slow; 
+
+    return output; 
+  }
+
 }
