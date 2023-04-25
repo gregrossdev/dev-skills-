@@ -96,3 +96,8 @@ export function grow(arr: number[]): number {
   let output: number = arr.reduce((sum,n) => sum*n); 
   return output; 
 }
+
+// Sentence Smash
+export function smash (words: string[]): string {
+  return words.join(' '); 
+};
