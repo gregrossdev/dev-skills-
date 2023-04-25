@@ -37,7 +37,7 @@ public class TwoPointers {
   // 16. 3Sum Closest
   public int threeSumClosest(int[] nums, int target) {
     int output = nums[0] + nums[1] + nums[2];
-    int n = nums.length; 
+    int n = nums.length;
     Arrays.sort(nums);
 
     for (int i = 0; i < n; i++) {
@@ -45,8 +45,10 @@ public class TwoPointers {
       int start = i + 1;
       while (start < end) {
         int sum = nums[i] + nums[start] + nums[end];
-        if (sum < target) start++;
-        else end--;
+        if (sum < target)
+          start++;
+        else
+          end--;
         if (Math.abs(sum - target) < Math.abs(output - target))
           output = sum;
       }
@@ -57,22 +59,42 @@ public class TwoPointers {
 
   // 26. Remove Duplicates from Sorted Array
   public int removeDuplicates(int[] nums) {
-    int output = 0; 
+    int output = 0;
     int n = nums.length;
-    
-    int slow = 1;
-    int fast = 1; 
-    while(fast < n) {
-      if(nums[fast] != nums[fast-1]) {
-        nums[slow] = nums[fast]; 
-        slow++; 
-      }
-      fast++; 
-    }
-    
-    output = slow; 
 
-    return output; 
+    int slow = 1;
+    int fast = 1;
+    while (fast < n) {
+      if (nums[fast] != nums[fast - 1]) {
+        nums[slow] = nums[fast];
+        slow++;
+      }
+      fast++;
+    }
+
+    output = slow;
+
+    return output;
+  }
+
+  // 27. Remove Element
+  public int removeElement(int[] nums, int val) {
+    int output = 0;
+    int n = nums.length;
+
+    int start = 0;
+    int end = n - 1;
+    while (start < n) 
+      if (nums[start] != val) 
+        start++;
+      else {
+        nums[start] = nums[end];
+        nums[end] = -1;
+        end--;
+        output++;
+      }
+    
+    return n - output;
   }
 
 }
