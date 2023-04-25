@@ -101,3 +101,19 @@ export function grow(arr: number[]): number {
 export function smash (words: string[]): string {
   return words.join(' '); 
 };
+
+// Convert a string to an array
+export function stringToArray(s: string): string[] {
+	return s.split(' '); 
+}
+
+
+
+
+
+
+
+
+
+
+
