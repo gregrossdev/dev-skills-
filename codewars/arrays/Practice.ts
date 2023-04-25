@@ -107,8 +107,19 @@ export function stringToArray(s: string): string[] {
 	return s.split(' '); 
 }
 
+// Total amount of points
+export function points(games : string[]): number {
+  let output: number = 0
+  for(const score of games) {
+    const arr = score.split(":")
+    if(Number(arr[0]) > Number(arr[1])) 
+      output += 3
+    else if (Number(arr[0]) == Number(arr[1])) 
+      output += 1
+  }
 
-
+  return output;
+}
 
 
 
