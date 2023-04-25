@@ -121,7 +121,14 @@ export function points(games : string[]): number {
   return output;
 }
 
-
+// Get the mean of an array
+export function getAverage(marks:number[]):number{
+  let output: number = 0; 
+  let n: number = marks.length; 
+  marks.forEach(num => output += num);
+  output = Math.floor(output/n); 
+  return output; 
+}
 
 
 
