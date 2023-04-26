@@ -9,3 +9,10 @@ export function binaryArrayToNumber(arr: number[]): number{
   // and then we parse it as a binary number using parseInt
   return parseInt(arr.join(''), 2);
 };
+
+// Odd or Even?
+export function oddOrEven(array: number[]) {
+  if(array.length == 0) return "even";  
+  let checkSum = array.reduce((sum, cur) => sum += cur); 
+  return checkSum % 2 == 0 ? "even" : "odd"; 
+}
