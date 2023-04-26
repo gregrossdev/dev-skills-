@@ -58,3 +58,35 @@ class FastSlow {
     }
     return null; 
   }
+
+
+  // 202. Happy Number
+  class IsHappy {
+    public boolean isHappy(int n) {
+      int slow = n;
+      int fast = n; 
+      
+      do {
+        slow = compute(slow); 
+        fast = compute(compute(fast)); 
+        if(slow == 1) return true; 
+      } 
+      while(slow != fast); 
+      
+      return false; 
+    }
+
+
+    public int compute(int num){
+      int n = 0;
+      while(num > 0){
+        int mod = num % 10;
+        n += mod + mod; 
+        num /= 10; 
+      }
+      return n;
+    }
+  }
+  
+
+
