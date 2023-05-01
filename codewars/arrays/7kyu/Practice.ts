@@ -21,3 +21,13 @@ export function oddOrEven(array: number[]) {
 export function number(array: string[]): string[]{
   return array.map((str,i) => `${i+1}: ${str}`); 
 }
+
+// Don't give me five!
+export function dontGiveMeFive(start:number, end:number) : number{
+  let count = 0; 
+  for(let i = start; i <= end; i++) 
+    if(!i.toString().includes("5"))
+      count++; 
+  
+  return count; 
+}
