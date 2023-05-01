@@ -16,3 +16,8 @@ export function oddOrEven(array: number[]) {
   let checkSum = array.reduce((sum, cur) => sum += cur); 
   return checkSum % 2 == 0 ? "even" : "odd"; 
 }
+
+// Testing 1-2-3
+export function number(array: string[]): string[]{
+  return array.map((str,i) => `${i+1}: ${str}`); 
+}
