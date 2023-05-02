@@ -22,3 +22,18 @@ export function duplicateEncode(word: string){
 
   return output; 
 }
+
+// Take a Ten Minutes Walk
+export function isValidWalk(walk: string[]) {
+  let vertical = 0
+  let horizontal = 0; 
+  walk.forEach(dir => {
+    if (dir == 'n') vertical ++; 
+    if (dir == 's') vertical --; 
+    if (dir == 'w') horizontal ++; 
+    if (dir == 'e') horizontal --; 
+  })
+  
+
+  return walk.length == 10 && vertical === 0 && horizontal === 0; 
+}
