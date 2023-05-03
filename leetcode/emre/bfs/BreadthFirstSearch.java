@@ -9,7 +9,7 @@ package leetcode.emre.bfs;
  * LeetCode 994 - Rotting Oranges [easy]
  */
 
-public class BFS {
+public class BreadthFirstSearch {
   /**
    **102. Binary Tree Level Order Traversal
    * Definition for a binary tree node.
