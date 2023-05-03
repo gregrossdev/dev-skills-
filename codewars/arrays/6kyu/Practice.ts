@@ -40,11 +40,10 @@ export function isValidWalk(walk: string[]) {
 
 // Tribonacci Sequence
 export function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
-  let output = [a, b, c]; 
-  if(n === 1) return [a]; 
-  
-  for (let i = 3; i <= n; i++) 
-    output[i] = output[i - 1] + output[i - 2] + output[i - 3]
-  
-  return output.slice(0, n); 
+  const sequence: number[] = [a, b, c];
+  for (let i = 3; i < n; i++) {
+    const next = sequence[i-3] + sequence[i-2] + sequence [i-1];
+    sequence.push(next);
+  }
+  return sequence.slice(0, n);
 }
