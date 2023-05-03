@@ -37,3 +37,14 @@ export function isValidWalk(walk: string[]) {
 
   return walk.length == 10 && vertical === 0 && horizontal === 0; 
 }
+
+// Tribonacci Sequence
+export function tribonacci([a, b, c]: [number, number, number], n: number): number[] {
+  let output = [a, b, c]; 
+  if(n === 1) return [a]; 
+  
+  for (let i = 3; i <= n; i++) 
+    output[i] = output[i - 1] + output[i - 2] + output[i - 3]
+  
+  return output.slice(0, n); 
+}
