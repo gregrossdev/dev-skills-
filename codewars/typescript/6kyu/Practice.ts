@@ -47,3 +47,24 @@ export function tribonacci([a, b, c]: [number, number, number], n: number): numb
   }
   return sequence.slice(0, n);
 }
+
+// Highest Scoring Word
+export const high = (str: string): string => {
+  let words = str.split(' ');
+  let strMax = 0;
+  let strRes = '';
+  for(let i = 0; i < words.length; i++){
+    let word = words[i];
+    let sum = 0;
+
+    for(let j = 0; j < word.length; j++)
+      sum += (word.charCodeAt(j) - 96);
+    
+    if(sum > strMax){
+      strMax = sum;
+      strRes = word;
+    }
+  }
+
+  return strRes;
+}
