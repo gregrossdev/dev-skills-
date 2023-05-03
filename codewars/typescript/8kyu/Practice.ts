@@ -130,7 +130,11 @@ export function getAverage(marks:number[]):number{
   return output; 
 }
 
-
+// Sum Mixed Array
+export function sumMix(x: any[]): number {
+  let nums: number[] = x.map(num => parseInt(num)); 
+  return nums.reduce((num, sum) => sum += num, 0); 
+}
 
 
 
