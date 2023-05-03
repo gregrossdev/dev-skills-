@@ -136,6 +136,17 @@ export function sumMix(x: any[]): number {
   return nums.reduce((num, sum) => sum += num, 0); 
 }
 
-
-
+// Which are in?
+export function inArray(a1: string[], a2: string[]): string[] {
+  let output: string[] = []; 
+  a1 = a1.sort(); 
+  for(let i = 0; i < a1.length; i++)
+    for(let j = 0; j < a2.length; j++)
+      if(a2[j].indexOf(a1[i]) !== -1) {
+        output.push(a1[i]);
+        break;
+      }
+  
+  return output; 
+}
 
