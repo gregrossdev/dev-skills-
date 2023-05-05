@@ -31,3 +31,8 @@ export function dontGiveMeFive(start:number, end:number) : number{
   
   return count; 
 }
+
+// Small enough? - Beginner
+export function smallEnough(a: number[], limit: number): boolean{
+  return a.every(num => num <= limit);
+}
