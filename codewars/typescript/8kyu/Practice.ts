@@ -150,3 +150,11 @@ export function inArray(a1: string[], a2: string[]): string[] {
   return output; 
 }
 
+// Count the Monkeys!
+export function monkeyCount(n: number) {
+  let output: number[] = []; 
+  for(let i = 1; i <= n; i++) 
+    output.push(i);
+  
+  return output; 
+}
