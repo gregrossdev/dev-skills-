@@ -68,3 +68,20 @@ export const high = (str: string): string => {
 
   return strRes;
 }
+
+// Equal Sides Of An Array
+export function findEvenIndex(arr: number[]): number {
+  let N = arr.length;
+
+  let rightsum = 0;
+  arr.forEach(num => rightsum += num)
+  
+  let leftsum = 0;
+  for(let i = 0; i < N; i++) {
+    rightsum -= arr[i];
+    if(leftsum === rightsum) return i;
+    leftsum += arr[i];
+  }
+  
+  return -1;
+}
