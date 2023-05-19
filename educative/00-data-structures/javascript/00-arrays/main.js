@@ -349,8 +349,27 @@ console.log(findSecondMaximum([9, 2, 3, 6]))
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-//--Challenge:
-// Solution #1:
+//--Challenge: Right Rotate an Array by n
+// Solution #1: Manual Rotation
+function rightRotate(arr, n){ 
+    var rotatedList = [] 
+    for(var item=arr.length-n;item<arr.length;item++) 
+      rotatedList.push(arr[item]) 
+    for(var item=0;item<arr.length-n;item++)
+      rotatedList.push(arr[item]) 
+    return rotatedList 
+}
+
+// time: O(n)
+console.log(rightRotate([1,2,3,4,5], 3))
+
+// Solution #2: Using splice() and concat()
+function rightRotate(arr, n) {
+    return (arr.splice(arr.length - n)).concat(arr.splice(0, arr.length))
+}
+
+// time: O(n)
+console.log(rightRotate([1,2,3,4,5], 3))
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
