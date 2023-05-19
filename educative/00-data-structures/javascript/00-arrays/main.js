@@ -155,3 +155,49 @@ return false;
 console.log(findSum([1,2,3,4],5))
 console.log(findSum([1,2,3,4],10))
 /////////////////////////////////////////////////////////////////////////////////
+//--Challenge: Array of Products of All Elements
+// Solution #1: Using a nested loop
+function findProduct(arr){
+  var result = []
+  var left = 1, currentproduct;
+  //To store product of all previous values from currentIndex
+  for(var i=0;i<arr.length;i++){
+    currentproduct = 1
+    //To store current product for index i    
+		//compute product of values to the right of i index of list
+    for(var j=i+1;j<arr.length;j++){
+      currentproduct = currentproduct * arr[j]
+    }
+    //currentproduct * product of all values to the left of i index
+    result.push(currentproduct * left)
+    //Updating `left`
+    left = left * arr[i]
+  }
+    
+  return result
+}
+
+// time: O(n^2)
+console.log(findProduct([1,2,3,4,5]))
+
+// Solution #2: Optimizing the number of multiplications
+function findProduct(arr) {
+    var temp = 1,
+        product = [];
+    for (var i = 0; i < arr.length ; i++) {
+        product[i]  = temp;
+        temp = temp * arr[i];
+    }
+
+    temp = 1;
+    for (var i = arr.length - 1; i > -1; i--) {
+        product[i] *= temp;
+        temp *= arr[i];
+    }
+
+    return product
+}
+
+// time: O(n)
+console.log(findProduct([1,3,4,5]))
+/////////////////////////////////////////////////////////////////////////////////
