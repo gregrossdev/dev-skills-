@@ -201,3 +201,77 @@ function findProduct(arr) {
 // time: O(n)
 console.log(findProduct([1,3,4,5]))
 /////////////////////////////////////////////////////////////////////////////////
+//--Challenge: Find Minimum Value in Array
+// Solution #1: Using a nested loop
+function findProduct(arr){
+    var result = []
+    var left = 1, currentproduct;
+    //To store product of all previous values from currentIndex
+    for(var i=0;i<arr.length;i++){
+      currentproduct = 1
+      //To store current product for index i    
+          //compute product of values to the right of i index of list
+      for(var j=i+1;j<arr.length;j++){
+        currentproduct = currentproduct * arr[j]
+      }
+      //currentproduct * product of all values to the left of i index
+      result.push(currentproduct * left)
+      //Updating `left`
+      left = left * arr[i]
+    }
+      
+    return result
+  }
+  
+  // time: O(n^2)
+  console.log(findProduct([1,2,3,4,5]))
+  
+  // Solution #2: Optimizing the number of multiplications
+  function findProduct(arr) {
+      var temp = 1,
+          product = [];
+      for (var i = 0; i < arr.length ; i++) {
+          product[i]  = temp;
+          temp = temp * arr[i];
+      }
+  
+      temp = 1;
+      for (var i = arr.length - 1; i > -1; i--) {
+          product[i] *= temp;
+          temp *= arr[i];
+      }
+  
+      return product
+  }
+  
+  // time: O(n)
+  console.log(findProduct([1,3,4,5]))
+  /////////////////////////////////////////////////////////////////////////////////
+//--Challenge: Find Minimum Value in Array
+// Solution #1: Sort the array
+function findMinimum(arr){
+    arr.sort((function(a, b){
+          return a - b
+      }))
+    return arr[0]
+  }
+  
+  //--time: O(nlogn)
+  console.log(findMinimum([9,2,3,6,-1]))
+  
+  // Solution #2: Iterate over the array#
+  function findMinimum(arr) {
+      var currentMin = arr[0];
+      //At every Index compare its value with current minimum 
+      //and if its less, then make that index value the new minimum value
+      for (let val of arr) {
+          if (val < currentMin)
+              currentMin = val
+      }
+  
+      return currentMin
+  }
+  
+  //--time: O(n)
+  console.log(findMinimum([9,2,3,6,-1]))
+  /////////////////////////////////////////////////////////////////////////////////
