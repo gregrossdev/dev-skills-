@@ -373,8 +373,43 @@ console.log(rightRotate([1,2,3,4,5], 3))
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
-//--Challenge:
-// Solution #1:
+//--Challenge: Rearrange Positive & Negative Values
+// Solution #1: Using Auxiliary Arrays
+function reArrange(arr){
+    var neg = []
+    var pos = []
+    for(let ele of arr){
+      if( ele < 0)
+        neg.push(ele)
+      else
+        pos.push(ele)
+    }
+    return neg.concat(pos)
+  }
+  
+  // time: O(n)
+  console.log(reArrange([10,-1,20,4,5,-9,-6]))
+
+//   Solution #2: Rearranging in Place
+
+function reArrange(arr) {
+    var leftMostPosEle = 0,
+        tmp;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            if (i != leftMostPosEle) {
+                tmp = arr[i];
+                arr[i] = arr[leftMostPosEle];
+                arr[leftMostPosEle] = tmp;
+            }
+            leftMostPosEle += 1
+        }
+    }
+    return arr;
+}
+
+// time: O(n)
+console.log(reArrange([10,-1,20,4,5,-9,-6]))
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
