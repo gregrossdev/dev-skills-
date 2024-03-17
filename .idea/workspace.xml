@@ -5,68 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b782ac85-f4ec-44e7-879b-0ffa08eb5b20" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dev-skills.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hackerrank/algorithms/implementation/Q16E_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codewars/typescript/6kyu/Practice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codewars/typescript/7kyu/Practice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codewars/typescript/8kyu/Practice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/01-arrays/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/01-arrays/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/01-insertion-at-tail/LinkedList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/01-insertion-at-tail/Node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/01-insertion-at-tail/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/02-search-in-singly-linked-list/LinkedList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/02-search-in-singly-linked-list/Node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/02-search-in-singly-linked-list/iterative.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/02-search-in-singly-linked-list/recursive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/03-delete-by-value/LinkedList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/03-delete-by-value/Node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/03-delete-by-value/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/04-find-length/LinkedList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/04-find-length/Node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/04-find-length/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/05-remove-duplicates/LinkedList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/05-remove-duplicates/Node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/educative/01-data-structures/02-linked-lists/js/05-remove-duplicates/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/BetweenTwoSets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/BreakingRecords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/CountApplesAndOranges.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/GradingStudents.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/Kangaroo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/implementation/easy/SubarrayDivision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/strings/Camelcase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/strings/StrongPassword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/AVeryBigSum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/BirthdayCakeCandles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/CompareTheTriplets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/DiagonalDifference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/MiniMaxSum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/PlusMinus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/Staircase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hackerrank/algorithms/warmup/easy/TimeConversion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/2-pointers/01-left-and-right/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/2-pointers/02-slow-and-fast/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/2-pointers/02-slow-and-fast/sliding-window/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/2-pointers/03-merge-2-arrays/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/2-pointers/03-merge-2-arrays/binary-search/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/arrays-&amp;-hashing/Practice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/bfs/BreadthFirstSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/binary-search/BinarySearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/cyclic-sort/CyclicSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/dfs/DepthFirstSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/fast-slow-pointers/FastSlow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/linkedlist-reversal/LinkedListReversal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/merge-intervals/MergeIntervals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/merge-k/MergeK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/sliding-window/SlidingWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/subsets/Subsets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/top-k/TopK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/two-heaps/TwoHeaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/emre/two-pointers/TwoPointers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/interview-questions/Easy.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,29 +27,32 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2caj1Gw4EmkpHhl5SpSEFYijYdF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.S3_CompareTheTripletsSolution.executor": "Run",
-    "Application.S4_AVeryBigSum.executor": "Run",
-    "Application.Solution.executor": "Run",
-    "Application.SolveMeFirst.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gregrossdev/Devl/Code/code-challenges",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.S3_CompareTheTripletsSolution.executor&quot;: &quot;Run&quot;,
+    &quot;Application.S4_AVeryBigSum.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Solution.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SolveMeFirst.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gregrossdev/Devl/Code/code-challenges&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Q04E_AVeryBigSum">
     <configuration name="Q01E_SolveMeFirst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hackerrank.algorithms.warmup.Q01E_SolveMeFirst" />
@@ -191,11 +134,43 @@
       <workItem from="1709649194861" duration="6543000" />
       <workItem from="1710370846443" duration="41000" />
       <workItem from="1710420713052" duration="3061000" />
-      <workItem from="1710462781728" duration="643000" />
+      <workItem from="1710462781728" duration="3580000" />
+      <workItem from="1710678758249" duration="638000" />
     </task>
+    <task id="LOCAL-00001" summary="update to just hackkerrank">
+      <option name="closed" value="true" />
+      <created>1710463571875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710463571875</updated>
+    </task>
+    <task id="LOCAL-00002" summary="did not understand problem">
+      <option name="closed" value="true" />
+      <created>1710508627092</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710508627092</updated>
+    </task>
+    <task id="LOCAL-00003" summary="easy">
+      <option name="closed" value="true" />
+      <created>1710508644909</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710508644909</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update to just hackkerrank" />
+    <MESSAGE value="did not understand problem" />
+    <MESSAGE value="easy" />
+    <option name="LAST_COMMIT_MESSAGE" value="easy" />
   </component>
 </project>
