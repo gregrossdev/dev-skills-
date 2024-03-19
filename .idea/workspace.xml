@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b782ac85-f4ec-44e7-879b-0ffa08eb5b20" name="Changes" comment="hard - learn pattern" />
+    <list default="true" id="b782ac85-f4ec-44e7-879b-0ffa08eb5b20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gregrossdev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2562440b-145c-4ec1-8c38-b647b681347a" />
+        <option name="url" value="https://github.com/gregrossdev/dev-skills.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -50,6 +66,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="patterns.slidingwindow" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Q04E_AVeryBigSum">
     <configuration name="Q01E_SolveMeFirst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hackerrank.algorithms.warmup.Q01E_SolveMeFirst" />
@@ -132,7 +153,7 @@
       <workItem from="1710370846443" duration="41000" />
       <workItem from="1710420713052" duration="3061000" />
       <workItem from="1710462781728" duration="3580000" />
-      <workItem from="1710678758249" duration="994000" />
+      <workItem from="1710678758249" duration="2588000" />
     </task>
     <task id="LOCAL-00001" summary="update to just hackkerrank">
       <option name="closed" value="true" />
@@ -166,7 +187,39 @@
       <option name="project" value="LOCAL" />
       <updated>1710680196876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workspace">
+      <option name="closed" value="true" />
+      <created>1710765571708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710765571708</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ignore workspace">
+      <option name="closed" value="true" />
+      <created>1710767149405</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710767149405</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Easy - Create object to count occurrences">
+      <option name="closed" value="true" />
+      <created>1710767190533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710767190533</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ignore .idea">
+      <option name="closed" value="true" />
+      <created>1710767255042</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710767255042</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +230,10 @@
     <MESSAGE value="did not understand problem" />
     <MESSAGE value="easy" />
     <MESSAGE value="hard - learn pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="hard - learn pattern" />
+    <MESSAGE value="workspace" />
+    <MESSAGE value="ignore workspace" />
+    <MESSAGE value="Easy - Create object to count occurrences" />
+    <MESSAGE value="ignore .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore .idea" />
   </component>
 </project>
