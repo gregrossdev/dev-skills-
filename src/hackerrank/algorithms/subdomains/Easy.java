@@ -765,6 +765,28 @@ public class Easy {
     }
 
     // 37. Append and Delete
+    public static String appendAndDelete(String s, String t, int k) {
+        if (s.length() + t.length() <= k) return "Yes";
+
+        int lengthOfCommonSubstring = 0;
+        for (int i = 0; i < s.length() && i < t.length() ; i++) {
+            if (s.charAt(i) == t.charAt(i)) {
+                lengthOfCommonSubstring++;
+                continue;
+            }
+            break;
+        }
+
+        int minNecessaryOperations = (s.length() - lengthOfCommonSubstring) + (t.length() - lengthOfCommonSubstring);
+        if (minNecessaryOperations > k) return "No";
+        if (minNecessaryOperations == k) return "Yes";
+
+        int restOperations = k - minNecessaryOperations;
+
+        if (lengthOfCommonSubstring * 2 >= restOperations) return restOperations % 2 == 0 ? "Yes" : "No";
+
+        return "Yes";
+    }
 
     // 38. Sherlock and Squares
 
@@ -775,5 +797,7 @@ public class Easy {
     // 41. Repeated String
 
     // 42. Jumping on the Clouds
+
+    // 43. Equalize the Array
 
 }
