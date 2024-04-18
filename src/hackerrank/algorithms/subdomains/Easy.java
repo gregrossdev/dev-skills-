@@ -789,6 +789,21 @@ public class Easy {
     }
 
     // 38. Sherlock and Squares
+    public static int squares(int a, int b) {
+        // Calculate the square root of a and round it up to the nearest integer
+        int sqrtA = (int) Math.ceil(Math.sqrt(a));
+
+        // Calculate the square root of b and round it down to the nearest integer
+        int sqrtB = (int) Math.floor(Math.sqrt(b));
+
+        // Count the number of square integers between sqrtA and sqrtB, inclusive
+        // The number of square integers is equal to the number of integers between sqrtA and sqrtB, plus 1
+        // This is because we're considering the integers inclusive of both sqrtA and sqrtB
+        int count = sqrtB - sqrtA + 1;
+
+        // Return the count of square integers within the range [a, b]
+        return count;
+    }
 
     // 39. Library Fine
 
