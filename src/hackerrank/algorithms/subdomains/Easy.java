@@ -806,6 +806,22 @@ public class Easy {
     }
 
     // 39. Library Fine
+    public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+        // Calculate the fine for returning the book late
+        int fine = 0;
+        // same year?
+        // the fine is fixed at 10000
+        if(y1 > y2) fine = 10000;
+            // same month?
+            // The fine is calculated as 500 * (the number of months late)
+        else if(y1 == y2 && m1 > m2) fine = 500 * (m1 - m2);
+            // same day?
+            // The fine is calculated as 15 * (the number of days late)
+        else if(y1 == y2 && m1 == m2 && d1 > d2) fine = 15 * (d1 - d2);
+        // on time
+        // if book return date <= return date the fine is 0
+        return fine;
+    }
 
     // 40. Cut the sticks
 
