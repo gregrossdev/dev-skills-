@@ -824,12 +824,12 @@ public class Easy {
     }
 
     // 40. Cut the sticks
-    public static List<Integer> cutTheSticks(int[] arr) {
-        // Sort the array in non-decreasing order
-        Arrays.sort(arr);
+    public static List<Integer> cutTheSticks(List<Integer> arr) {
+        // Sort the list in non-decreasing order
+        Collections.sort(arr);
 
         List<Integer> result = new ArrayList<>();
-        int n = arr.length;
+        int n = arr.size();
         int i = 0;
 
         while (i < n) {
@@ -837,10 +837,10 @@ public class Easy {
             result.add(n - i);
 
             // Find the length of the current smallest stick
-            int minStick = arr[i];
+            int minStick = arr.get(i);
 
             // Skip sticks with the same length as the current smallest stick
-            while (i < n && arr[i] == minStick) {
+            while (i < n && arr.get(i) == minStick) {
                 i++;
             }
         }
