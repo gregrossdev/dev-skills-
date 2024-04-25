@@ -1110,6 +1110,24 @@ public class Easy {
 
     }
 
+    // 53. Fair Rations
+    public static String fairRations(List<Integer> B) {
+        // Find the minimum number of loaves required to distribute bread so that every person has an even number of loaves
+        int loaves = 0;
+        int sum = 0;
+
+        for (int i = 0; i < B.size(); i++) {
+            sum += B.get(i);
+            if (sum % 2 != 0) {
+                loaves += 2;
+                B.set(i, B.get(i) + 1);
+                B.set(i + 1, B.get(i + 1) + 1);
+            }
+        }
+
+        return sum % 2 == 0 ? String.valueOf(loaves) : "NO";
+
+    }
 
 
 }
