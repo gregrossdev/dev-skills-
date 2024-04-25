@@ -903,5 +903,24 @@ public class Easy {
     }
 
     // 43. Equalize the Array
+    public static int equalizeArray(List<Integer> arr) {
+        // Find the minimum number of deletions required to make all elements in the array equal
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        // Count the frequency of each element in the array
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        // Find the element with the maximum frequency
+        int maxFrequency = 0;
+        for (int frequency : frequencyMap.values()) {
+            maxFrequency = Math.max(maxFrequency, frequency);
+        }
+
+        // Calculate the minimum number of deletions required
+        return arr.size() - maxFrequency;
+
+    }
 
 }
