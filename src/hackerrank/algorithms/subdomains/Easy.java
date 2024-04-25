@@ -1114,20 +1114,62 @@ public class Easy {
     public static String fairRations(List<Integer> B) {
         // Find the minimum number of loaves required to distribute bread so that every person has an even number of loaves
         int loaves = 0;
-        int sum = 0;
 
-        for (int i = 0; i < B.size(); i++) {
-            sum += B.get(i);
-            if (sum % 2 != 0) {
-                loaves += 2;
+        for (int i = 0; i < B.size() - 1; i++) {
+            if (B.get(i) % 2 != 0) {
                 B.set(i, B.get(i) + 1);
                 B.set(i + 1, B.get(i + 1) + 1);
+                loaves += 2;
             }
         }
 
-        return sum % 2 == 0 ? String.valueOf(loaves) : "NO";
+        if (B.get(B.size() - 1) % 2 != 0) {
+            return "NO";
+        } else {
+            return String.valueOf(loaves);
+        }
 
     }
+
+    // 54. Cavity Map
+    public static List<String> cavityMap(List<String> grid) {
+        // Find and mark the cavities in the grid
+        List<String> result = new ArrayList<>();
+        int n = grid.size();
+
+        for (int i = 0; i < n; i++) {
+            if (i == 0 || i == n - 1) {
+                result.add(grid.get(i));
+                continue;
+            }
+
+            StringBuilder row = new StringBuilder();
+            row.append(grid.get(i).charAt(0));
+
+            for (int j = 1; j < n - 1; j++) {
+                int current = Character.getNumericValue(grid.get(i).charAt(j));
+                int top = Character.getNumericValue(grid.get(i - 1).charAt(j));
+                int bottom = Character.getNumericValue(grid.get(i + 1).charAt(j));
+                int left = Character.getNumericValue(grid.get(i).charAt(j - 1));
+                int right = Character.getNumericValue(grid.get(i).charAt(j + 1));
+
+                if (current > top && current > bottom && current > left && current > right) {
+                    row.append('X');
+                } else {
+                    row.append(grid.get(i).charAt(j));
+                }
+            }
+
+            row.append(grid.get(i).charAt(n - 1));
+            result.add(row.toString());
+        }
+
+        return result;
+
+    }
+
+
+
 
 
 }
