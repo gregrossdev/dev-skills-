@@ -973,4 +973,35 @@ public class Easy {
 
     }
 
+    // 46. Modified Kaprekar Numbers
+    public static void kaprekarNumbers(int p, int q) {
+        // Find and print the Kaprekar numbers in the range [p, q]
+        List<Integer> kaprekarNumbers = new ArrayList<>();
+
+        for (int i = p; i <= q; i++) {
+            long square = (long) i * i;
+            String squareStr = String.valueOf(square);
+
+            int d = squareStr.length() / 2;
+            String leftStr = squareStr.substring(0, d);
+            String rightStr = squareStr.substring(d);
+
+            int left = leftStr.isEmpty() ? 0 : Integer.parseInt(leftStr);
+            int right = rightStr.isEmpty() ? 0 : Integer.parseInt(rightStr);
+
+            if (left + right == i) {
+                kaprekarNumbers.add(i);
+            }
+        }
+
+        if (kaprekarNumbers.isEmpty()) {
+            System.out.println("INVALID RANGE");
+        } else {
+            for (int kaprekarNumber : kaprekarNumbers) {
+                System.out.print(kaprekarNumber + " ");
+            }
+        }
+
+    }
+
 }
