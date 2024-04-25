@@ -1,11 +1,23 @@
-package hackerrank.algorithms.subdomains.s03_strings;
+package hackerrank.algorithms.subdomains;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+public class Strings {
+    /*
+     * Easy
+     ******************/
+    // 58. CamelCase
+    public static int camelcase(String s) {
+        // determine the number of words in a camelCase string
+        int count = 1;
+        // count each uppercase letters + 1
+        for (int idx = 0; idx < s.length(); idx++) {
+            char letter = s.charAt(idx);
+            if(Character.isUpperCase(letter)) count++;
+        }
 
-public class E02_StrongPassword {
+        return count;
+    }
 
+    // 59. Strong Password
     public static int minimumNumber(int n, String password) {
         // Return the minimum number of characters to make the password strong
         int valid = 4;
@@ -56,17 +68,31 @@ public class E02_StrongPassword {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    // 60. Ceaser Cipher
+    public static String caesarCipher(String s, int k) {
+        String encrypted = "";
+        // rotate letters by k factor
+        for (int idx = 0; idx < s.length(); idx++) {
+            // add k to each character
+            char letter  = s.charAt(idx);
+            // character or not
+            if(Character.isLetter(letter)) {
+                // uppercase or not
+                char type = Character.isUpperCase(letter) ? 'A' : 'a';
+                char encryptedLetter = (char) ((letter - type + k) % 26 + type);
+                // int asciiValuePlusK = (int) letter + k;
+                // char encryptedLetter = (char) asciiValuePlusK;
+                encrypted += encryptedLetter;
+            }
+            else {
+                encrypted += letter;
+            }
+        }
+        // returns encrypted string
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        System.out.println(encrypted);
 
-        String password = bufferedReader.readLine();
-
-        int answer = minimumNumber(n, password);
-
-        System.out.println(answer);
-
-        bufferedReader.close();
+        return encrypted;
     }
+
 }

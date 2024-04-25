@@ -2,223 +2,10 @@ package hackerrank.algorithms.subdomains;
 
 import java.util.*;
 
-public class Easy {
-    /*
-     * Warmup
-     **********/
-
-    // 01. Solve Me First
-    public static int solveMeFirst(int a, int b) {
-        // Hint: Type return a+b; below
-        return a + b;
-    }
-
-    // 02. Simple Array Sum
-    public static int simpleArraySum(List<Integer> ar) {
-        // find the sum by adding all elements
-        int sum = 0;
-        // input: [1,2,3,4,10,11]
-        // output: 33
-        // example: 1 + 2 + 3 + 4 + 10 + 11 = 33
-        // for each integer from list, add to sum
-        for (Integer num : ar) {
-            // 33 = 1 + 2 + 3 + 4 + 10 + 11
-            sum += num;
-        }
-
-        // return 33;
-        return sum;
-    }
-
-    // 03. Compare the Triplets
-    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-        // compare each list item index
-        // input: a = [5, 6, 7], b = [3, 6, 10]
-        // output: [1, 1]
-        List<Integer> score = new ArrayList<>();
-        int aliceScore = 0;
-        int bobScore   = 0;
-        // if a[index] > b[index] alice scores a point
-        // if a[index] < b[index] bob scores a point
-        // if a[index] = b[index] neither scores a point
-        for (int idx = 0; idx < a.size(); idx++) {
-            int alice = a.get(idx);
-            int bob  = b.get(idx);
-            if(alice > bob) aliceScore++;
-            if(alice < bob) bobScore++;
-        }
-
-        score.add(aliceScore);
-        score.add(bobScore);
-        // return [aliceScore, bobScore]
-
-        return score;
-    }
-
-    // 04. A Very Big Sum
-    public static long aVeryBigSum(List<Long> ar) {
-        // calculate and print sum of elements in array
-        // input: [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
-        // output: 5000000015
-        long sum = 0;
-        // sum each long value in array
-        for (Long value: ar) {
-            sum += value;
-        }
-
-        // return sum of elements
-        return sum;
-    }
-
-    // 05. Diagonal Difference
-    public static int diagonalDifference(List<List<Integer>> arr) {
-        // calculate the absolute difference between the sums of its diagonals
-        // input: [[11, 2,   4],
-        //         [04, 5,   6],
-        //         [10, 8, -12]]
-        // output: 15
-        int ltr = 0;
-        int rtl = 0;
-        int n = arr.size();
-        for (int idx = 0; idx < arr.size(); idx++) {
-            // ltr diagonal ltr = 11 + 5 + -12
-            // ltr = [ltr[0] + ltr[1] + ltr[2]]
-            // ltr = 04
-            ltr += arr.get(idx).get(idx);
-            // rtl diagonal rtl =  4 + 5 + 10
-            // rtl = [rtl[2] + rtl[1] + rtl[0]]
-            // rtl = 19
-            // (3 - 1) - 0 = 2
-            // (3 - 1) - 1 = 1
-            // (3 - 1) - 2 = 0
-            rtl += arr.get(idx).get((n - 1) - idx);
-
-            // rtl += arr.get(idx).get(Math.abs(idx - (n - 1)));
-
-        }
-
-        // return absolute difference from ltr to rtl
-        // 04 - 19 = -15
-        // absolute diff = 15
-        return Math.abs(ltr - rtl);
-
-    }
-
-    // 06. Plus Minus
-    public static void plusMinus(List<Integer> arr) {
-        // calculate the ratios of its elements that are positive, negative, and zero.
-        // input: [-4, 3, -9, 0, 4, 1]
-        // output:
-        //----------
-        // postive values / number of values
-        // System.out.println(0.500000)
-        // negative values / number of values
-        // System.out.println(0.333333)
-        // zero values / number of values
-        // System.out.println(0.166667)
-        //--------------------------------------------------
-        int totalValues = arr.size();
-        double positiveValues = 0;
-        double negativeValues = 0;
-        double zeroValues     = 0;
-
-        for (int idx = 0; idx < totalValues; idx++) {
-            int value = arr.get(idx);
-            if(value > 0) positiveValues++;
-            else if (value < 0) negativeValues++;
-            else zeroValues++;
-        }
-
-        System.out.println(String.format("%.6f", positiveValues/totalValues));
-        System.out.println(String.format("%.6f", negativeValues/totalValues));
-        System.out.println(String.format("%.6f",     zeroValues/totalValues));
-
-    }
-
-    // 07. Staircase
-    public static void staircase(int n) {
-        // print a staircase of size n
-        // staircase draws from rtl
-        // n = height
-        int height = n;
-        for (int i = 1; i <= height; i++) {
-            for(int j = 1; j <= height - i; j++){
-                System.out.print(" ");
-            }
-            for (int j = 1; j <= i; j++) {
-                System.out.print("#");
-            }
-            System.out.println();
-        }
-
-    }
-
-    // 08. Mini-Max Sum
-    public static void miniMaxSum(List<Integer> arr) {
-        int min = Integer.MAX_VALUE;
-        int max = 0;
-        long totalSum = 0;
-
-        for (int i = 0; i < arr.size(); i++) {
-            int currentNumber = arr.get(i);
-
-            totalSum += currentNumber;
-
-            if (currentNumber > max) {
-                max = currentNumber;
-            }
-
-            if (currentNumber < min) {
-                min = currentNumber;
-            }
-        }
-
-        long minSum = totalSum - max;
-        long maxSum = totalSum - min;
-
-        System.out.println(minSum + " " + maxSum);
-    }
-
-    // 09. Birthday Cake Candles
-    public static int birthdayCakeCandles(List<Integer> candles) {
-        // count the tallest candles
-        // input: [3,2,1,3]
-        // output: 2
-        int howMany = 0;
-        int max = Integer.MIN_VALUE;
-
-        for (Integer candle : candles) {
-            // find the tallest
-            if(candle > max) {
-                max = candle;
-                howMany = 1;
-            }
-            // count how many
-            else if(candle == max) howMany++;
-        }
-
-
-        return howMany;
-    }
-
-    // 10. Time Conversion
-    public static String timeConversion(String s) {
-        String timeOfDay = s.substring(s.length() - 2);
-        String formattedTime;
-
-        if (timeOfDay.equals("PM")) {
-            int hour = Integer.parseInt(s.substring(0, 2));
-            formattedTime = (hour == 12) ? s.substring(0, 8) : String.format("%02d%s", hour + 12, s.substring(2, 8));
-        } else {
-            int hour = Integer.parseInt(s.substring(0, 2));
-            formattedTime = (hour == 12) ? String.format("%02d%s", 0, s.substring(2, 8)) : s.substring(0, 8);
-        }
-
-        return formattedTime;
-    }
+public class Implementation {
 
     /*
-     * Implementation
+     * Easy
      ******************/
 
     // 11. Grading Students
@@ -233,7 +20,7 @@ public class Easy {
         List<Integer> roundedGrades = new ArrayList<>();
 
         for (int grade : grades) {
-            if(grade < 38 || grade % 5 < 3) roundedGrades.add(grade);
+            if (grade < 38 || grade % 5 < 3) roundedGrades.add(grade);
             else {
                 int roundedGrade = (grade / 5 + 1) * 5;
                 roundedGrades.add(roundedGrade);
@@ -246,7 +33,7 @@ public class Easy {
     // 12. Apple and Orange
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
         // find how many apples and oranges land within range of  (s - t) which is sams house
-        int noOfApples  = 0;
+        int noOfApples = 0;
         int noOfOranges = 0;
 
         // +d moved right, -d moved left
@@ -254,13 +41,13 @@ public class Easy {
         // apples
         for (int apple : apples) {
             int posDist = a + apple;
-            if(posDist >= s && posDist <= t) noOfApples++;
+            if (posDist >= s && posDist <= t) noOfApples++;
         }
 
         // oranges
         for (int orange : oranges) {
             int posDist = b + orange;
-            if(posDist >= s && posDist <= t) noOfOranges++;
+            if (posDist >= s && posDist <= t) noOfOranges++;
         }
 
         System.out.println(noOfApples);
@@ -278,7 +65,7 @@ public class Easy {
             kangaroo1 += v1;
             kangaroo2 += v2;
 
-            if(kangaroo1 == kangaroo2) return "YES";
+            if (kangaroo1 == kangaroo2) return "YES";
 
             jumps++;
         }
@@ -301,6 +88,7 @@ public class Easy {
         return count;
     }
 
+    // helper methods for Between Two Sets
     static int gcd(int a, int b) {
         while (b != 0) {
             int temp = b;
@@ -341,11 +129,11 @@ public class Easy {
         int minScore = scores.get(0);
 
         for (int score : scores) {
-            if(score < minScore) {
+            if (score < minScore) {
                 minScore = score;
                 minCount++;
             }
-            if(score > maxScore) {
+            if (score > maxScore) {
                 maxScore = score;
                 maxCount++;
             }
@@ -403,8 +191,8 @@ public class Easy {
         int bird = -1;
         int maxCount = 0;
 
-        for (Map.Entry<Integer, Integer> entry: count.entrySet()) {
-            int birdType  = entry.getKey();
+        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
+            int birdType = entry.getKey();
             int birdCount = entry.getValue();
             if (birdCount > maxCount || (birdCount == maxCount && birdType < bird)) {
                 bird = birdType;
@@ -429,10 +217,9 @@ public class Easy {
         if (year == 1918) {
             return "26.09.1918";
         }
-        if((year < 1918 && year % 4 == 0) || (year > 1918 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))) {
+        if ((year < 1918 && year % 4 == 0) || (year > 1918 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))) {
             day = "12";
-        }
-        else {
+        } else {
             day = "13";
         }
 
@@ -445,7 +232,7 @@ public class Easy {
         // split the bill between anna and brian
         int total = 0;
         for (int idx = 0; idx < bill.size(); idx++) {
-            if(idx != k) total += bill.get(idx);
+            if (idx != k) total += bill.get(idx);
         }
 
         int annaCost = total / 2;
@@ -460,7 +247,7 @@ public class Easy {
         int count = 0;
         // {1:3, 2:3, 3:1}
         Map<Integer, Integer> socks = new HashMap<>();
-        for(int idx = 0; idx < ar.size(); idx++)
+        for (int idx = 0; idx < ar.size(); idx++)
             socks.put(ar.get(idx), socks.getOrDefault(ar.get(idx), 0) + 1);
 
         for (Map.Entry<Integer, Integer> entry : socks.entrySet())
@@ -485,15 +272,14 @@ public class Easy {
         boolean inValley = false;
 
         char[] charArray = path.toCharArray();
-        for(char letter: charArray) {
-            if(letter == 'U') seaLevel++;
-            else if(letter == 'D') seaLevel--;
+        for (char letter : charArray) {
+            if (letter == 'U') seaLevel++;
+            else if (letter == 'D') seaLevel--;
 
-            if(seaLevel == 0) {
-                if(inValley) count++;
+            if (seaLevel == 0) {
+                if (inValley) count++;
                 inValley = false;
-            }
-            else if(seaLevel < 0) inValley = true;
+            } else if (seaLevel < 0) inValley = true;
         }
 
 
@@ -525,7 +311,7 @@ public class Easy {
         int unitsCatA = Math.abs(z - x);
         int unitsCatB = Math.abs(z - y);
         // conditional return
-        if(unitsCatA < unitsCatB) return "Cat A";
+        if (unitsCatA < unitsCatB) return "Cat A";
         else if (unitsCatA > unitsCatB) return "Cat B";
         else return "Mouse C";
 
@@ -560,10 +346,10 @@ public class Easy {
         // max number in list - max jump
         int max = 0;
         for (int maxHeight : height)
-            if(maxHeight > max) max = maxHeight;
+            if (maxHeight > max) max = maxHeight;
 
         int potions = max - k;
-        if(potions > 0) return potions;
+        if (potions > 0) return potions;
         else return 0;
     }
 
@@ -588,7 +374,7 @@ public class Easy {
         int height = 1;
         // first the size doubles and then increases by +1
         for (int period = 0; period < n; period++) {
-            if(period % 2 == 0) height += height;
+            if (period % 2 == 0) height += height;
             else height += 1;
         }
 
@@ -601,11 +387,11 @@ public class Easy {
         // if greater than k (threshold)
         String cancelledClass = "";
         int inClassCount = 0;
-        for(int student: a) {
-            if(student <= 0) inClassCount++;
+        for (int student : a) {
+            if (student <= 0) inClassCount++;
         }
 
-        if(inClassCount >= k) cancelledClass = "NO";
+        if (inClassCount >= k) cancelledClass = "NO";
         else cancelledClass = "YES";
 
         return cancelledClass;
@@ -645,7 +431,7 @@ public class Easy {
         int liked = (int) Math.floor(shared / 2.0);
         int cumulative = liked; // total likes
 
-        for(int day = 2; day <= n; day++) {
+        for (int day = 2; day <= n; day++) {
             // ( recipients / 2 ) like and share with 3 friends on the following day
             shared = liked * 3;
             liked = (int) Math.floor(shared / 2.0);
@@ -756,9 +542,9 @@ public class Easy {
         int countDivisors = 0;
         // convert int to string to get values in an array
         String nStr = Integer.toString(n);
-        for(int idx = 0; idx < nStr.length(); idx++) {
+        for (int idx = 0; idx < nStr.length(); idx++) {
             int number = Character.getNumericValue(nStr.charAt(idx));
-            if(number != 0 && n % number == 0) countDivisors++;
+            if (number != 0 && n % number == 0) countDivisors++;
         }
 
         return countDivisors;
@@ -769,7 +555,7 @@ public class Easy {
         if (s.length() + t.length() <= k) return "Yes";
 
         int lengthOfCommonSubstring = 0;
-        for (int i = 0; i < s.length() && i < t.length() ; i++) {
+        for (int i = 0; i < s.length() && i < t.length(); i++) {
             if (s.charAt(i) == t.charAt(i)) {
                 lengthOfCommonSubstring++;
                 continue;
@@ -811,13 +597,13 @@ public class Easy {
         int fine = 0;
         // same year?
         // the fine is fixed at 10000
-        if(y1 > y2) fine = 10000;
+        if (y1 > y2) fine = 10000;
             // same month?
             // The fine is calculated as 500 * (the number of months late)
-        else if(y1 == y2 && m1 > m2) fine = 500 * (m1 - m2);
+        else if (y1 == y2 && m1 > m2) fine = 500 * (m1 - m2);
             // same day?
             // The fine is calculated as 15 * (the number of days late)
-        else if(y1 == y2 && m1 == m2 && d1 > d2) fine = 15 * (d1 - d2);
+        else if (y1 == y2 && m1 == m2 && d1 > d2) fine = 15 * (d1 - d2);
         // on time
         // if book return date <= return date the fine is 0
         return fine;
@@ -1229,10 +1015,6 @@ public class Easy {
         return cycle - t + 1;
 
     }
-
-
-
-
 
 
 }
