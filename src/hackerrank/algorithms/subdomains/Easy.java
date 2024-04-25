@@ -849,6 +849,37 @@ public class Easy {
     }
 
     // 41. Repeated String
+    public static long repeatedString(String s, long n) {
+        // Count the number of occurrences of 'a' in the repeated string
+        long count = 0;
+
+        // Count the number of 'a's in the original string
+        long originalCount = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'a') {
+                originalCount++;
+            }
+        }
+
+        // Calculate the number of times the original string is repeated
+        long repeats = n / s.length();
+
+        // Calculate the number of 'a's in the repeated string
+        count = repeats * originalCount;
+
+        // Calculate the number of remaining characters in the repeated string
+        long remaining = n % s.length();
+
+        // Count the number of 'a's in the remaining characters
+        for (int i = 0; i < remaining; i++) {
+            if (s.charAt(i) == 'a') {
+                count++;
+            }
+        }
+
+        return count;
+
+    }
 
     // 42. Jumping on the Clouds
 
