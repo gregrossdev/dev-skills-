@@ -1004,4 +1004,20 @@ public class Easy {
 
     }
 
+    // 47. Beautiful Triplets
+    public static int beautifulTriplets(int d, List<Integer> arr) {
+        // Find the number of beautiful triplets in the array
+        int count = 0;
+        Set<Integer> set = new HashSet<>(arr);
+
+        for (int num : arr) {
+            if (set.contains(num + d) && set.contains(num + 2 * d)) {
+                count++;
+            }
+        }
+
+        return count;
+
+    }
+
 }
