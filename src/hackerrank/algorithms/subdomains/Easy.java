@@ -1217,6 +1217,19 @@ public class Easy {
 
     }
 
+    // 57. Strange Counter
+    public static long strangeCounter(long t) {
+        // Calculate the value of the counter at time t
+        long cycle = 3;
+        while (t > cycle) {
+            t -= cycle;
+            cycle *= 2;
+        }
+
+        return cycle - t + 1;
+
+    }
+
 
 
 
