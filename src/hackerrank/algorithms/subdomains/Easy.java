@@ -1041,4 +1041,21 @@ public class Easy {
 
     }
 
+    // 49. Halloween Sale
+    public static int howManyGames(int p, int d, int m, int s) {
+        // Calculate the number of games that can be bought with the given budget
+        int games = 0;
+        int currentPrice = p;
+
+        while (s >= currentPrice) {
+            games++;
+            s -= currentPrice;
+            currentPrice = Math.max(currentPrice - d, m);
+        }
+
+        return games;
+
+    }
+
+
 }
