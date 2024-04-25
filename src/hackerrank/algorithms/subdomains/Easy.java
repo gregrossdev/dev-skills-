@@ -1168,6 +1168,23 @@ public class Easy {
 
     }
 
+    // 55. Manasa and Stones
+    public static List<Integer> stones(int n, int a, int b) {
+        // Find the possible values of the last stone after n - 1 turns
+        Set<Integer> values = new HashSet<>();
+
+        for (int i = 0; i < n; i++) {
+            int value = i * a + (n - 1 - i) * b;
+            values.add(value);
+        }
+
+        List<Integer> result = new ArrayList<>(values);
+        Collections.sort(result);
+        return result;
+
+    }
+
+
 
 
 
