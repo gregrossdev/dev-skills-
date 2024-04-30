@@ -1,6 +1,8 @@
 package leetcode.studyplan.leetcode_75;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArraysAndStrings {
@@ -99,5 +101,35 @@ public class ArraysAndStrings {
 
     }
 
+    // 345. Reverse Vowels of a String
+    public String reverseVowels(String s) {
+        // # reverse the vowels in the string and return a new string
+        String newString = "";
+        // ## create a list of vowels for comparing from the string
+        List<Character> vowelList = Arrays.asList('a', 'e', 'i', 'o', 'u');
+        List<Character> vowels = new ArrayList<>();
+        // ## loop through string to find vowels
+        for(int idx = 0; idx < s.length(); idx++) {
+            char letter = s.charAt(idx);
+            if(vowelList.contains(Character.toLowerCase(letter))) vowels.add(letter);
+        }
+        // ## reverse order of vowels
+        List<Character> reversedVowels = new ArrayList<>(vowels);
+        Collections.reverse(reversedVowels);
+        // ## replace vowels in original string
+        int vowelIdx = 0;
+        for(int idx = 0; idx < s.length(); idx++) {
+            char letter = s.charAt(idx);
+            if(!vowelList.contains(Character.toLowerCase(letter))) {
+                newString += letter;
+            }
+            else {
+                newString += reversedVowels.get(vowelIdx);
+                vowelIdx++;
+            }
+        }
+
+        return newString;
+    }
 
 }
