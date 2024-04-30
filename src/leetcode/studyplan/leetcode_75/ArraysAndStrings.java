@@ -72,6 +72,32 @@ public class ArraysAndStrings {
         return kidList;
     }
 
+    // 605. Can Place Flowers
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        // # determine if new flower(s) can be planted without being next to another
+        boolean canPlant = false;
+        int newFlowers = 0;
+        // ## loop through each flower to figure if 2 adjacent 0's exist
+        for(int idx = 0; idx < flowerbed.length; idx++) {
+            // ### check if already planted
+            if(flowerbed[idx] == 1) continue;
+
+            // ### first flower
+            if(idx == 0 || flowerbed[idx - 1] == 0) {
+                // ### second flower
+                if(idx == flowerbed.length - 1 || flowerbed[idx + 1] == 0) {
+                    flowerbed[idx] = 1;
+                    newFlowers++;
+                }
+            }
+        }
+
+        // ## check if new flowers can be planted
+        if(newFlowers >= n) canPlant = true;
+
+        return canPlant;
+
+    }
 
 
 }
