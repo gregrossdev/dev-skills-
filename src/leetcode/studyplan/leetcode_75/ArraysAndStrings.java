@@ -1,8 +1,8 @@
-package leetcode;
+package leetcode.studyplan.leetcode_75;
 
-public class L75 {
+public class ArraysAndStrings {
     /*
-     * Array / String
+     * Easy
      ******************/
 
     // 1768. Merge Strings Alternately
@@ -23,5 +23,10 @@ public class L75 {
 
         return mergedString;
     }
+
+
+
+
+
 
 }
