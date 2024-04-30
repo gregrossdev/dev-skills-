@@ -1,5 +1,8 @@
 package leetcode.studyplan.leetcode_75;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArraysAndStrings {
     /*
      * Easy
@@ -47,6 +50,27 @@ public class ArraysAndStrings {
         return findGCD(b, a % b);
     }
 
+    // 1431. Kids With the Greatest Number of Candies
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        // # determine if each kid has extra candy
+        List<Boolean> kidList = new ArrayList<>();
+        // ## find greatest amount of candy
+        int greatestAmount = 0;
+        for(int idx = 0; idx < candies.length; idx++) {
+            int currentKid = candies[idx];
+            if(currentKid > greatestAmount) greatestAmount = currentKid;
+        }
+
+        // ## for each kid check if they have greatest amount of candy
+        for(int idx = 0; idx < candies.length; idx++) {
+            boolean hasExtraCandy = false;
+            int currentKid = candies[idx];
+            if(currentKid + extraCandies >= greatestAmount) hasExtraCandy = true;
+            kidList.add(hasExtraCandy);
+        }
+
+        return kidList;
+    }
 
 
 
