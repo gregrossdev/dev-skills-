@@ -25,4 +25,25 @@ public class TwoPointers {
       }
 
   }
+
+  // 392. Is Subsequence
+  public boolean isSubsequence(String s, String t) {
+    // # is s a subsequence of t
+    boolean isS = false;
+    int sLength = s.length();
+    if(sLength == 0) return true;
+    // ## find s index's in t
+    int sIdx = 0;
+    for(int tIdx = 0; tIdx < t.length() && sIdx < sLength; tIdx++) {
+      // check if sequence of s is in t
+      if(s.charAt(sIdx) == t.charAt(tIdx)) sIdx++;
+    }
+
+    if(sIdx == sLength) isS = true;
+
+    return isS;
+  }
+
+
+
 }
