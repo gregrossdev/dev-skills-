@@ -117,4 +117,27 @@ public class Strings {
         return result;
     }
 
+    // 62. Pangrams
+    public static String pangrams(String s) {
+        // check if its a pangram meaning containing every letter of the alphabet
+        String notPangram = "not pangram";
+        // check if its over 26 characters
+        if(s.length() < 26) return notPangram;
+        // normalize string to lowercase
+        s = s.toLowerCase();
+        // check if the string contains all the letters of the alphabet
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        // loop to check indices of the alphabet to the string indices
+        for(int idx = 0; idx < alphabet.length(); idx++) {
+            // if char in alphabet not found (-1) in string return result
+            if(s.indexOf(alphabet.charAt(idx)) == -1) return notPangram;
+        }
+
+
+
+        return "pangram";
+    }
+
+
+
 }
