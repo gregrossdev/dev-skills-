@@ -95,4 +95,26 @@ public class Strings {
         return encrypted;
     }
 
+    // 61. HackerRank in a String!
+    public static String hackerrankInString(String s) {
+        // check if subsesquence is in string
+        String result = "NO";
+        String subSeq = "hackerrank";
+        // check lengths
+        if(s.length() < subSeq.length()) return result;
+        // compare indices of both strings (2 pointers)
+        int sIdx      = 0;
+        int subSeqIdx = 0;
+        while(sIdx < s.length() && subSeqIdx < subSeq.length()) {
+            // if subSeq char is in string move to the next index of subSeq
+            if(subSeq.charAt(subSeqIdx) == s.charAt(sIdx)) subSeqIdx++;
+            sIdx++;
+        }
+
+        // check if subSeq index value is equal to the length
+        if(subSeqIdx == subSeq.length()) result = "YES";
+
+        return result;
+    }
+
 }
