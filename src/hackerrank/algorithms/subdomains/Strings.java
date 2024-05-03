@@ -138,6 +138,49 @@ public class Strings {
         return "pangram";
     }
 
+    // 63. Separate the Numbers
+    public static void separateNumbers(String s) {
+        // check if the string can be split into a sequence of increasing numbers
+        boolean foundBeautiful = false;
+        long firstNumber = -1;
+
+        // Iterate through the string to find a beautiful sequence
+        for (int length = 1; length <= s.length() / 2; length++) {
+            // Iterate through the string to find a beautiful sequence
+            // We start with a length of 1 and go up to half of the string length
+            // because we're looking for sequences that start with a number of at least 1 digit
+            // and end with a number that's not longer than half of the string length.
+
+            long num = Long.parseLong(s.substring(0, length));
+            firstNumber = num;
+            String beautifulString = Long.toString(num);
+
+            // Generate the beautiful sequence based on the first number
+            // We initialize the beautifulString with the first number and then
+            // keep appending consecutive numbers until the length of beautifulString
+            // becomes equal to the length of the input string.
+
+            while (beautifulString.length() < s.length()) {
+                num++;
+                beautifulString += Long.toString(num);
+            }
+
+            // Check if the generated sequence matches the input string
+            // If the generated beautifulString matches the input string,
+            // then we have found a beautiful sequence.
+
+            if (beautifulString.equals(s)) {
+                foundBeautiful = true;
+                break;
+            }
+        }
+
+        // If the sequence is increasing, return "YES" followed by the first number
+        if (foundBeautiful) System.out.println("YES " + firstNumber);
+        else System.out.println("NO");
+
+    }
+
 
 
 }
