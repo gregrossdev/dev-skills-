@@ -22,5 +22,28 @@ public class PrefixSum {
 
 	}
 
+	// 724. Find Pivot Index
+	public int pivotIndex(int[] nums) {
+		// determine the leftmost pivot index ?
+		// meaning the sum of the left side is equal to the sum of the right side
+		int leftSum = 0;
+		int rightSum = 0;
+		// sum all the elements for right side
+		for (int num : nums) rightSum += num;
+		// iterate through the array
+		for (int idx = 0; idx < nums.length; idx++) {
+			// subtract the current element from the right sum
+			rightSum -= nums[idx];
+			// if the left sum is equal to the right sum, return the index
+			if (leftSum == rightSum) return idx;
+			// add the current element to the left sum
+			leftSum += nums[idx];
+
+		}
+
+		return -1;
+
+	}
+
 
 }
