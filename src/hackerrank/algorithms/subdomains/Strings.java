@@ -272,5 +272,27 @@ public class Strings {
 
 	}
 
+	/*  67. The Love-Letter Mystery
+	 *  Determine the minimum number of operations required to convert a given string into a palindrome.
+	 *  Can only reduce the value of a letter by 1, so for ex. d -> c or c -> b
+	 */
+	public static int theLoveLetterMystery(String s) {
+		// count minimum operations
+		int minOperations = 0;
+		// check for a palindrome in the string
+		for (int idx = 0; idx < s.length() / 2; idx++) {
+			// compare the characters from the start and end of the string
+			char start = s.charAt(idx);
+			char end = s.charAt(s.length() - 1 - idx);
+			// find the difference in the characters by their ascii values
+			minOperations += Math.abs(start - end);
+		}
+
+		return minOperations;
+
+	}
+
+
+
 
 }
