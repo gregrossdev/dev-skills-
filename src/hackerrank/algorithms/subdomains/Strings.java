@@ -272,7 +272,7 @@ public class Strings {
 
 	}
 
-	/*  67. The Love-Letter Mystery
+	/*  68. The Love-Letter Mystery
 	 *  Determine the minimum number of operations required to convert a given string into a palindrome.
 	 *  Can only reduce the value of a letter by 1, so for ex. d -> c or c -> b
 	 */
