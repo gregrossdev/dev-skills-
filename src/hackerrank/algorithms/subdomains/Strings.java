@@ -221,7 +221,7 @@ public class Strings {
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
 		// loop through the alphabet
 		int idx = 0;
-		while(idx < alphabet.length()) {
+		while (idx < alphabet.length()) {
 			// check if the gemstone is in all the strings
 			boolean isGemstone = true;
 			for (String rock : arr) {
@@ -255,7 +255,7 @@ public class Strings {
 
 	/*  67. Beautiful Binary String
 	 *  Count and print the minimum number of steps needed to make Alice see the string as beautiful.
-   *  It is beautiful if it does not contain the substring "010"
+	 *  It is beautiful if it does not contain the substring "010"
 	 */
 	public static int beautifulBinaryString(String b) {
 		int count = 0;
@@ -292,7 +292,28 @@ public class Strings {
 
 	}
 
-
-
-
+	/*  69. Palindrome Index
+	 *  determine the index of a character that can be removed to make the string a palindrome
+	 */
+	public static int palindromeIndex(String s) {
+		// check if the string is a palindrome
+		int idx = 0;
+		int endIdx = s.length() - 1;
+		// loop through the string
+		while (idx < endIdx) {
+			// compare the characters from the start and end of the string
+			if (s.charAt(idx) != s.charAt(endIdx)) {
+				// check if the string is a palindrome if the character at the start is removed
+				if (s.charAt(idx + 1) == s.charAt(endIdx) && s.charAt(idx + 2) == s.charAt(endIdx - 1)) {
+					return idx;
+				}
+				else {
+					return endIdx;
+				}
+			}
+			idx++;
+			endIdx--;
+		}
+		return -1;
+	}
 }
