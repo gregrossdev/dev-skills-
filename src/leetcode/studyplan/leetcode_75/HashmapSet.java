@@ -1,9 +1,6 @@
 package leetcode.studyplan.leetcode_75;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class HashmapSet {
 	/*
@@ -37,5 +34,23 @@ public class HashmapSet {
 		result.add(list1);
 		result.add(list2);
 		return result;
+	}
+
+	// 1207. Unique Number of Occurrences
+	public boolean uniqueOccurrences(int[] arr) {
+		// Determine the number of occurrences of each integer to see if they are unique
+		// Store the integer and its occurrence in a hashmap
+		HashMap<Integer, Integer> intMap = new HashMap<>();
+		for (int intKey : arr) {
+			intMap.put(intKey, intMap.getOrDefault(intKey, 0) + 1);
+		}
+		// Store the occurrences in a hashset to check if they are unique
+		Set<Integer> occurrenceSet = new HashSet<>();
+		for (int occurrence : intMap.values()) {
+			if (occurrenceSet.contains(occurrence)) return false;
+			occurrenceSet.add(occurrence);
+		}
+
+		return true;
 	}
 }
