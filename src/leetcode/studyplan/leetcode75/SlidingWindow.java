@@ -1,4 +1,4 @@
-package leetcode.studyplan.leetcode_75;
+package leetcode.studyplan.leetcode75;
 
 public class SlidingWindow {
 	/*

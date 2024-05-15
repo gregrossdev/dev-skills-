@@ -1,4 +1,4 @@
-package leetcode.studyplan.leetcode_75;
+package leetcode.studyplan.leetcode75;
 
 import java.util.ArrayList;
 import java.util.Arrays;
