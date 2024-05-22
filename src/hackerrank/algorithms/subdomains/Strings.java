@@ -3,10 +3,11 @@ package hackerrank.algorithms.subdomains;
 import java.util.List;
 
 public class Strings {
-	/*
-	 * Easy
+	/* Easy
 	 ******************/
-	// 58. CamelCase
+
+	/** CamelCase
+	 */
 	public static int camelcase(String s) {
 		// determine the number of words in a camelCase string
 		int count = 1;
@@ -19,7 +20,8 @@ public class Strings {
 		return count;
 	}
 
-	// 59. Strong Password
+	/** Strong Password
+	 */
 	public static int minimumNumber(int n, String password) {
 		// Return the minimum number of characters to make the password strong
 		int valid = 4;
@@ -70,7 +72,8 @@ public class Strings {
 		}
 	}
 
-	// 60. Ceaser Cipher
+	/** Ceaser Cipher
+	 */
 	public static String caesarCipher(String s, int k) {
 		String encrypted = "";
 		// rotate letters by k factor
@@ -96,7 +99,8 @@ public class Strings {
 		return encrypted;
 	}
 
-	// 61. HackerRank in a String!
+	/** HackerRank in a String!
+	 */
 	public static String hackerrankInString(String s) {
 		// check if subsesquence is in string
 		String result = "NO";
@@ -118,7 +122,8 @@ public class Strings {
 		return result;
 	}
 
-	// 62. Pangrams
+	/** Pangrams
+	 */
 	public static String pangrams(String s) {
 		// check if its a pangram meaning containing every letter of the alphabet
 		String notPangram = "not pangram";
@@ -138,7 +143,8 @@ public class Strings {
 		return "pangram";
 	}
 
-	// 63. Separate the Numbers
+	/** Separate the Numbers
+	 */
 	public static void separateNumbers(String s) {
 		// check if the string can be split into a sequence of increasing numbers
 		boolean foundBeautiful = false;
@@ -181,7 +187,8 @@ public class Strings {
 
 	}
 
-	// 64. Funny String
+	/** Funny String
+	 */
 	public static String funnyString(String s) {
 		// Initialize the result as "Not Funny"
 		String result = "Not Funny";
@@ -213,7 +220,8 @@ public class Strings {
 		return result;
 	}
 
-	// 65. Gemstones
+	/** Gemstones
+	 */
 	public static int gemstones(List<String> arr) {
 		// display the number of types of gemstones in the collection
 		int countTypes = 0;
@@ -239,7 +247,8 @@ public class Strings {
 
 	}
 
-	// 66. Alternating Characters
+	/** Alternating Characters
+	 */
 	public static int alternatingCharacters(String s) {
 		// find the minimum number of required deletions so that there are no matching adjacent characters.
 		int minDeletes = 0;
@@ -253,7 +262,7 @@ public class Strings {
 
 	}
 
-	/*  67. Beautiful Binary String
+	/** Beautiful Binary String
 	 *  Count and print the minimum number of steps needed to make Alice see the string as beautiful.
 	 *  It is beautiful if it does not contain the substring "010"
 	 */
@@ -272,7 +281,7 @@ public class Strings {
 
 	}
 
-	/*  68. The Love-Letter Mystery
+	/** The Love-Letter Mystery
 	 *  Determine the minimum number of operations required to convert a given string into a palindrome.
 	 *  Can only reduce the value of a letter by 1, so for ex. d -> c or c -> b
 	 */
@@ -292,7 +301,7 @@ public class Strings {
 
 	}
 
-	/*  69. Palindrome Index
+	/** Palindrome Index
 	 *  determine the index of a character that can be removed to make the string a palindrome
 	 */
 	public static int palindromeIndex(String s) {
@@ -315,5 +324,34 @@ public class Strings {
 			endIdx--;
 		}
 		return -1;
+	}
+
+	/** Anagram
+	 *  determine the minimum number of characters of the first string to change to make it an anagram of the second string
+	 */
+	public static int anagram(String s) {
+		// split the string into two substrings
+		String s1 = s.substring(0, s.length() / 2);
+		String s2 = s.substring(s.length() / 2);
+		// check if the substrings are equal lengths
+		if (s1.length() != s2.length()) return -1;
+		// check if the substrings are anagrams
+		int[] s1Freq = new int[26];
+		int[] s2Freq = new int[26];
+		// loop for characters of substrings
+		for (int idx = 0; idx < s1.length(); idx++) {
+			s1Freq[s1.charAt(idx) - 'a']++;
+			s2Freq[s2.charAt(idx) - 'a']++;
+		}
+		// check the frequency of characters
+		int minChanges = 0;
+		for (int idx = 0; idx < 26; idx++) {
+			minChanges += Math.abs(s1Freq[idx] - s2Freq[idx]);
+		}
+		// return the minimum number of changes
+		return minChanges / 2;
+
+
+
 	}
 }
