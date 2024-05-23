@@ -376,4 +376,27 @@ public class Strings {
 		return minDeletes;
 
 	}
+
+	/** Game of Thrones - I
+	 * determine if a string can be rearranged into a palindrome
+	 */
+	public static String gameOfThrones(String s) {
+		String result = "NO";
+		// char freq in the string
+		int[] freq = new int[26];
+		// loop for characters of substrings
+		for (int idx = 0; idx < s.length(); idx++) {
+			freq[s.charAt(idx) - 'a']++;
+		}
+		// check if the string can be rearranged into a palindrome
+		int oddCount = 0;
+		for (int idx = 0; idx < 26; idx++) {
+			if (freq[idx] % 2 != 0) oddCount++;
+		}
+		if (oddCount <= 1) result = "YES";
+
+		return result;
+
+	}
+
 }
