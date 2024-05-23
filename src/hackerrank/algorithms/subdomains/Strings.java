@@ -351,7 +351,29 @@ public class Strings {
 		// return the minimum number of changes
 		return minChanges / 2;
 
+	}
 
+	/** Making Anagrams
+	 *  determine the minimum number of characters to delete to make two strings anagrams
+	 */
+	public static int makingAnagrams(String s1, String s2) {
+		int minDeletes = 0;
+		// check character frequency in both strings
+		int[] s1Freq = new int[26];
+		int[] s2Freq = new int[26];
+		// loop for characters of substrings
+		for (int idx = 0; idx < s1.length(); idx++) {
+			s1Freq[s1.charAt(idx) - 'a']++;
+		}
+		for (int idx = 0; idx < s2.length(); idx++) {
+			s2Freq[s2.charAt(idx) - 'a']++;
+		}
+		// loop for determining the min deletes of characters
+		for (int idx = 0; idx < 26; idx++) {
+			minDeletes += Math.abs(s1Freq[idx] - s2Freq[idx]);
+		}
+
+		return minDeletes;
 
 	}
 }
