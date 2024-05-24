@@ -3,7 +3,7 @@ package hackerrank.algorithms.subdomains;
 import java.util.List;
 
 public class Strings {
-	/* Easy
+	/*! Easy
 	 ******************/
 
 	/** CamelCase
@@ -97,6 +97,24 @@ public class Strings {
 		System.out.println(encrypted);
 
 		return encrypted;
+	}
+
+	/** Mars Exploration
+	 *  determine the number of letters that are different from the original message
+	 */
+	public static int marsExploration(String s) {
+		int count = 0;
+		// check if the message is different from the original
+		for (int idx = 0; idx < s.length(); idx++) {
+			// check if the character is different from the original
+			if (idx % 3 == 0 || idx % 3 == 2) {
+				if (s.charAt(idx) != 'S') count++;
+			} else {
+				if (s.charAt(idx) != 'O') count++;
+			}
+		}
+
+		return count;
 	}
 
 	/** HackerRank in a String!
@@ -417,6 +435,26 @@ public class Strings {
 		}
 
 		return "NO";
+	}
+
+	/** String Construction
+	 *  determine the cost of copying a string
+	 */
+	public static int stringConstruction(String s) {
+		int cost = 0;
+		// char freq in the string
+		int[] freq = new int[26];
+		// loop for characters of substrings
+		for (int idx = 0; idx < s.length(); idx++) {
+			freq[s.charAt(idx) - 'a']++;
+		}
+		// check if the string can be copied
+		for (int idx = 0; idx < 26; idx++) {
+			if (freq[idx] > 0) cost++;
+		}
+
+		return cost;
+
 	}
 
 
