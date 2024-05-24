@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Implementation {
 
-    /*
-     * Easy
+    /*! Easy
      ******************/
 
-    // 11. Grading Students
+    /** Grading Students
+     */
     public static List<Integer> gradingStudents(List<Integer> grades) {
         // round all the grades based off of the following policy
         // if less than 40 keep as is
@@ -30,7 +30,8 @@ public class Implementation {
         return roundedGrades;
     }
 
-    // 12. Apple and Orange
+    /** Apple and Orange
+     */
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
         // find how many apples and oranges land within range of  (s - t) which is sams house
         int noOfApples = 0;
@@ -54,7 +55,8 @@ public class Implementation {
         System.out.println(noOfOranges);
     }
 
-    // 13. Number Line Jumps
+    /** Number Line Jumps
+     */
     public static String kangaroo(int x1, int v1, int x2, int v2) {
         // check if both kangaroos end in the same location
         int kangaroo1 = x1;
@@ -73,7 +75,8 @@ public class Implementation {
         return "NO";
     }
 
-    // 14. Between Two Sets
+    /** Between Two Sets
+     */
     public static int getTotalX(List<Integer> a, List<Integer> b) {
         int lcmA = lcmOfArray(a);
         int gcdB = gcdOfArray(b);
@@ -118,7 +121,8 @@ public class Implementation {
         return result;
     }
 
-    // 15. Breaking the Records
+    /** Breaking the Records
+     */
     public static List<Integer> breakingRecords(List<Integer> scores) {
         // count number of games either max or min points were scored
         List<Integer> records = new ArrayList<>();
@@ -145,7 +149,8 @@ public class Implementation {
         return records;
     }
 
-    // 16. Subarray Division
+    /** Subarray Division
+     */
     public static int birthday(List<Integer> s, int d, int m) {
         // count how many segments are possible
         int count = 0;
@@ -175,7 +180,22 @@ public class Implementation {
         return count;
     }
 
-    // 17. Migratory Birds
+    /** Divisible Sum Pairs
+     */
+    public static int divisibleSumPairs(int n, int k, List<Integer> ar) {
+        // count the number of pairs that are divisible by k
+        int count = 0;
+        for (int i = 0; i < ar.size(); i++) {
+            for (int j = i + 1; j < ar.size(); j++) {
+                if ((ar.get(i) + ar.get(j)) % k == 0) count++;
+            }
+        }
+
+        return count;
+    }
+
+    /** Migratory Birds
+     */
     public static int migratoryBirds(List<Integer> arr) {
         // count elements in array
         // [2,2,3,4,4,5,5,5]
@@ -208,7 +228,8 @@ public class Implementation {
 
     }
 
-    // 18. Day of the Programmer
+    /** Day of the Programmer
+     */
     public static String dayOfProgrammer(int year) {
         // convert date to another date
         // if leap year the 256th day is Sept 12
@@ -227,7 +248,8 @@ public class Implementation {
         return day + ".09." + year;
     }
 
-    // 19. Bill Division
+    /** Bill Division
+     */
     public static void bonAppetit(List<Integer> bill, int k, int b) {
         // split the bill between anna and brian
         int total = 0;
@@ -241,7 +263,8 @@ public class Implementation {
 
     }
 
-    // 20. Sales by Match
+    /** Sales by Match
+     */
     public static int sockMerchant(int n, List<Integer> ar) {
         // count socks that do not have pairs
         int count = 0;
@@ -256,14 +279,16 @@ public class Implementation {
         return count;
     }
 
-    // 21. Drawing Book
+    /** Drawing Book
+     */
     public static int pageCount(int n, int p) {
         int fromStart = p / 2; // Number of pages turned from the start
         int fromEnd = n / 2 - p / 2; // Number of pages turned from the end (Total pages from start - pages from start)
         return Math.min(fromStart, fromEnd); // Return the minimum of pages turned
     }
 
-    // 22. Counting Valleys
+    /** Counting Valleys
+     */
     public static int countingValleys(int steps, String path) {
         // count the number of valleys walked through.
         int count = 0;
@@ -286,7 +311,8 @@ public class Implementation {
         return count;
     }
 
-    // 23. Electronics Shop
+    /** Electronics Shop
+     */
     public static int getMoneySpent(int[] keyboards, int[] drives, int b) {
         // determine most expensive keyboard and usb drive within a given budget
         int max = -1;
@@ -304,7 +330,8 @@ public class Implementation {
         return max;
     }
 
-    // 24. Cats and Mouse
+    /** Cats and Mouse
+     */
     public static String catAndMouse(int x, int y, int z) {
         // determine which cat will reach the mouse first
         // absolute units because of x-axis
@@ -317,7 +344,8 @@ public class Implementation {
 
     }
 
-    // 25. Picking Numbers
+    /** Picking Numbers
+     */
     public static int pickingNumbers(List<Integer> a) {
         Map<Integer, Integer> frequencyMap = new HashMap<>(); // Create a HashMap to store frequency of numbers
 
@@ -340,7 +368,8 @@ public class Implementation {
         return maxCount;
     }
 
-    // 26. The Hurdle Race
+    /** The Hurdle Race
+     */
     public static int hurdleRace(int k, List<Integer> height) {
         // How many doses of the potion must the character take to be able to jump all of the hurdles.
         // max number in list - max jump
@@ -353,7 +382,8 @@ public class Implementation {
         else return 0;
     }
 
-    // 27. Designer PDF Viewer
+    /** Designer PDF Viewer
+     */
     public static int designerPdfViewer(List<Integer> h, String word) {
         // determine the area of the rectangle highlight in assuming all letters arewide.
         // by finding tallest letter value and multiplying by the word length
@@ -367,7 +397,8 @@ public class Implementation {
         return tallest * word.length();
     }
 
-    // 28. Utopian Tree
+    /** Utopian Tree
+     */
     public static int utopianTree(int n) {
         // how tall after n cycles ?
         // initial height = 1;
@@ -381,7 +412,8 @@ public class Implementation {
         return height;
     }
 
-    // 29. Angry Professor
+    /** Angry Professor
+     */
     public static String angryProfessor(int k, List<Integer> a) {
         // determine if the class is cancelled
         // if greater than k (threshold)
